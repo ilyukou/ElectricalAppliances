@@ -1,1 +1,15 @@
-2019-28-24 01:28:36.679 [main] WARN  model.apartment.Room - class model.ElectricAppliances is null
+2019-28-24 01:28:36.679 [main] WARN  model.apartment.Room - class model.ElectricAppliance is null
+2019-13-24 19:13:36.620 [main] ERROR model.apartment.Room - Rooms size isn't validate
+2019-15-24 19:15:14.086 [main] ERROR model.apartment.Room - Rooms size isn't validate
+2019-16-24 19:16:33.456 [main] ERROR model.apartment.Room - Rooms size isn't validate
+2019-18-24 19:18:20.413 [main] ERROR model.apartment.Room - Rooms size isn't validate
+2019-35-24 22:35:42.244 [main] ERROR model.apartment.Room - Not enough free sockets
+2019-35-24 22:35:42.272 [main] ERROR model.apartment.Apartment - List<Room> is null or size is 0
+2019-36-24 22:36:21.626 [main] ERROR model.apartment.Room - Not enough free sockets
+2019-36-24 22:36:21.628 [main] ERROR model.apartment.Apartment - List<Room> is null or size is 0
+2019-39-24 22:39:41.794 [main] ERROR model.apartment.Room - Not enough free sockets
+2019-39-24 22:39:41.798 [main] ERROR model.apartment.Apartment - List<Room> is null or size is 0
+2019-40-24 22:40:49.881 [main] ERROR model.apartment.Room - Not enough free sockets
+2019-40-24 22:40:49.883 [main] ERROR model.apartment.Apartment - List<Room> is null or size is 0
+2019-40-24 22:40:53.903 [main] ERROR model.apartment.Room - Not enough free sockets
+2019-41-24 22:41:21.839 [main] ERROR model.apartment.Room - Not enough free sockets

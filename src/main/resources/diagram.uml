@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="96.5" y="319.0">model.electricAppliance.kitchen.KitchenElectricAppliance</node>
+    <node x="0.0" y="664.0">model.apartment.Apartment</node>
+    <node x="115.0" y="494.0">model.electricAppliance.kitchen.Microwave</node>
+    <node x="652.0" y="664.0">model.ElectricApplianceType</node>
+    <node x="284.0" y="664.0">model.Validator</node>
+    <node x="0.0" y="0.0">model.ElectricAppliance</node>
+    <node x="519.0" y="906.0">model.exception.NotEnoughFreeSockets</node>
+    <node x="0.0" y="906.0">Controller</node>
+    <node x="298.0" y="906.0">Main</node>
+    <node x="458.0" y="0.0">model.apartment.Room</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.electricAppliance.kitchen.KitchenElectricAppliance" target="model.ElectricAppliance">
+      <point x="0.0" y="-62.5" />
+      <point x="0.0" y="134.5" />
+    </edge>
+    <edge source="model.electricAppliance.kitchen.Microwave" target="model.electricAppliance.kitchen.KitchenElectricAppliance">
+      <point x="0.0" y="-62.5" />
+      <point x="0.0" y="62.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="301.3333333333336" y="215.16666666666657" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

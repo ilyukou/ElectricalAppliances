@@ -1,17 +1,23 @@
+import model.ElectricAppliance;
 import model.apartment.Apartment;
-import model.apartment.Room;
+import model.comporators.ElectricApplianceComparatorByPower;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Comparator;
+
 
 public class Main {
 
     public static void main(String[] args) {
-        Room room = Room.build(null,5);
-        List<Room> rooms = new ArrayList<>();
-        rooms.add(room);
-        Apartment apartment = Apartment.build(rooms);
-        System.out.println();
 
+        Controller controller = new Controller();
+
+        Apartment apartment = controller.createApartment();
+
+        System.out.println(apartment.getPowerInRooms());
+        System.out.println();
+        apartment.getAllElectricAppliance().sort(new ElectricApplianceComparatorByPower());
+        System.out.println();
     }
 }
