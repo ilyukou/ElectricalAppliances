@@ -6,7 +6,7 @@ import java.util.List;
 public interface Database<T> {
 
     // how can i know what's object i need ?
-    T getObject(T t) throws IOException;
+    T getObject(String objectName) throws IOException;
 
     void setObject(T t) throws IOException;
 }

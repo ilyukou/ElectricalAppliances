@@ -12,6 +12,7 @@ public class Main {
 
         Database database = DatabseSwitcher.getDatabase("json");
 
+        System.out.println();
         Controller controller = new Controller();
 
         Apartment apartment = controller.createApartment();
@@ -19,10 +20,7 @@ public class Main {
         System.out.println(apartment.getPowerInRooms());
 
         database.setObject(apartment);
-
-        for (Room room : apartment.getRooms()){
-            database.setObject(room);
-        }
+        database.setObject(apartment.getRooms());
 
     }
 }

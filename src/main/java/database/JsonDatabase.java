@@ -13,17 +13,18 @@ public class JsonDatabase implements Database {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
-    public Object getObject(Object o) throws IOException {
+    public Object getObject(String objectName) throws IOException {
         Object list;
 
         list = objectMapper
-                .readValue(getTextFromFile(DatabaseFilePath.getFileUriForObject(o)), new TypeReference<Object>(){});
+                .readValue(getTextFromFile(DatabaseFilePath.getFileUriForObject(objectName)), new TypeReference<Object>(){});
 
         return list;
     }
 
     @Override
     public void setObject(Object o) throws IOException {
+        System.out.println();
         FileWriter fileWriter = new FileWriter(DatabaseFilePath.getFileUriForObject(o));
 
         fileWriter.write(objectMapper.writeValueAsString(o));
