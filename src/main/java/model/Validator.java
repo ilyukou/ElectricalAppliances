@@ -6,8 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Validator {
+
     public static <T> boolean validate(T value, T min, T max, Comparator<T> comparator){
-        System.out.println();
         return ( comparator.compare(value, min) >= 0 )
                 && ( comparator.compare(value, max) <= 0 );
     }

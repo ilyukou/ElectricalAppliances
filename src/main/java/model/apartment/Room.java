@@ -15,17 +15,28 @@ public class Room implements Cloneable{
 
     private List<ElectricAppliance> electricAppliances = new ArrayList<>();
     private int numberOfSoket;
+    private RoomType roomType;
 
-    public Room(List<ElectricAppliance> electricAppliances, int numberOfSoket) throws NotEnoughFreeSockets{
+    public Room(List<ElectricAppliance> electricAppliances, int numberOfSoket,
+                RoomType roomType) throws NotEnoughFreeSockets{
         logger.info("Create class");
         setNumberOfSoket(numberOfSoket);
         setElectricAppliances(electricAppliances);
+        setRoomType(roomType);
+    }
 
+    public RoomType getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(RoomType roomType) {
+        this.roomType = roomType;
     }
 
     public boolean isFreeSocketsExist(){
         return getNumberOfSoket() > getElectricAppliances().size();
     }
+
     public boolean isEnoughSocketsForElectricAppliance(int numberOfSoket, int appliancesListSize){
         return numberOfSoket >= appliancesListSize;
     }

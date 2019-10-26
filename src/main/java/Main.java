@@ -1,23 +1,28 @@
-import model.ElectricAppliance;
+import database.Database;
+import database.DatabseSwitcher;
 import model.apartment.Apartment;
-import model.comporators.ElectricApplianceComparatorByPower;
+import model.apartment.Room;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.io.IOException;
 
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, IOException {
+
+        Database database = DatabseSwitcher.getDatabase("json");
 
         Controller controller = new Controller();
 
         Apartment apartment = controller.createApartment();
 
         System.out.println(apartment.getPowerInRooms());
-        System.out.println();
-        apartment.getAllElectricAppliance().sort(new ElectricApplianceComparatorByPower());
-        System.out.println();
+
+        database.setObject(apartment);
+
+        for (Room room : apartment.getRooms()){
+            database.setObject(room);
+        }
+
     }
 }

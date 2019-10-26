@@ -13,3 +13,29 @@
 2019-40-24 22:40:49.883 [main] ERROR model.apartment.Apartment - List<Room> is null or size is 0
 2019-40-24 22:40:53.903 [main] ERROR model.apartment.Room - Not enough free sockets
 2019-41-24 22:41:21.839 [main] ERROR model.apartment.Room - Not enough free sockets
+2019-32-25 15:32:26.294 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-32-25 15:32:26.323 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-32-25 15:32:26.332 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-33-25 15:33:24.154 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-33-25 15:33:24.169 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-33-25 15:33:24.178 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-22-25 16:22:46.768 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-22-25 16:22:46.803 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-22-25 16:22:46.824 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-22-25 16:22:47.790 [main] ERROR model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-22-25 16:22:47.800 [main] ERROR model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-23-25 16:23:22.520 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-23-25 16:23:22.550 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-23-25 16:23:22.567 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-23-25 16:23:23.338 [main] ERROR model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-46-26 13:46:48.343 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-46-26 13:46:48.354 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-46-26 13:46:48.362 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-46-26 13:46:49.093 [main] ERROR model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-19-26 17:19:11.610 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-19-26 17:19:11.642 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-19-26 17:19:11.654 [main] ERROR model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-19-26 17:19:13.307 [main] ERROR model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-19-26 17:19:29.012 [main] ERROR model.apartment.Room - Not enough free sockets
+2019-19-26 17:19:29.015 [main] ERROR model.apartment.Apartment - List<Room> is null or size is 0
+2019-20-26 17:20:18.074 [main] ERROR model.apartment.Room - Not enough free sockets

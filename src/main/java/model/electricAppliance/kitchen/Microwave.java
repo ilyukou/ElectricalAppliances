@@ -25,7 +25,6 @@ public class Microwave extends KitchenElectricAppliance implements Cloneable{
     public void setVolume(int volume) {
         if(Validator.validate(volume,0,Integer::compareTo)){
             this.volume = volume;
-
         }else {
             logger.error("volume isn't validate");
             throw new IllegalArgumentException(Microwave.class +" size isn't validate");
