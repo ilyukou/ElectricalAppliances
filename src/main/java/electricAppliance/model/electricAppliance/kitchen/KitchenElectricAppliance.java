@@ -9,12 +9,12 @@ import org.apache.logging.log4j.Logger;
 public abstract class KitchenElectricAppliance extends ElectricAppliance implements Cloneable{
 
     private static final Logger logger = LogManager.getLogger(KitchenElectricAppliance.class);
-
+    private static final ElectricApplianceType ELECTRIC_APPLIANCE_TYPE = ElectricApplianceType.Kitchen;
     private int cookingTime;
 
-    public KitchenElectricAppliance(int power, String name, ElectricApplianceType electricApplianceType,
+    public KitchenElectricAppliance(int power, String name,
                                     int cookingTime) {
-        super(power, name, electricApplianceType);
+        super(power, name, ELECTRIC_APPLIANCE_TYPE);
         setCookingTime(cookingTime);
     }
 

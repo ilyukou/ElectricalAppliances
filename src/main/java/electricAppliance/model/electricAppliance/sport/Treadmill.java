@@ -37,7 +37,7 @@ public class Treadmill extends SportElectricAppliance {
 
     public void setTrackWidth(int trackWidth) {
         if (Validator.validate(trackWidth,0,Integer::compareTo)) {
-            this.trackWidth = trackLength;
+            this.trackWidth = trackWidth;
         }else {
             throw new IllegalArgumentException("Track width might have been positive");
         }

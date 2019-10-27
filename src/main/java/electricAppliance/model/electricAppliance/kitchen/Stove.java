@@ -1,6 +1,5 @@
 package electricAppliance.model.electricAppliance.kitchen;
 
-import electricAppliance.model.electricAppliance.ElectricApplianceType;
 import electricAppliance.Validator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,9 +10,9 @@ public class Stove extends KitchenElectricAppliance implements Cloneable{
 
     private int numberOfBurners;
 
-    public Stove(int power, String name, ElectricApplianceType electricApplianceType,
+    public Stove(int power, String name,
                  int cookingTime, int numberOfBurners) {
-        super(power, name, electricApplianceType, cookingTime);
+        super(power, name, cookingTime);
         logger.info("Create class by constructor");
         setNumberOfBurners(numberOfBurners);
     }

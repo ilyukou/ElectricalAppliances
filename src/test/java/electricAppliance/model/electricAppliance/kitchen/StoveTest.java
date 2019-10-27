@@ -1,18 +1,17 @@
 package electricAppliance.model.electricAppliance.kitchen;
 
-import electricAppliance.model.electricAppliance.ElectricApplianceType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StoveTest {
     private Stove stove;
 
     @BeforeEach
     void setUp() {
-        stove = new Stove(100,"LG", ElectricApplianceType.Kitchen,5,2);
+        stove = new Stove(100,"LG",5,2);
     }
 
 

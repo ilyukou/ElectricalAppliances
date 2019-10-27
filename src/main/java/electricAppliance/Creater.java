@@ -33,9 +33,9 @@ public class Creater {
                 LightBulbsType.Halogen,3);
 
         // kitchen
-        Microwave microwave = new Microwave(1000,"Lg", ElectricApplianceType.Kitchen,
+        Microwave microwave = new Microwave(1000,"Lg",
                 3,20);
-        Stove stove = new Stove(1500,"Samsung",ElectricApplianceType.Kitchen,
+        Stove stove = new Stove(1500,"Samsung",
                 60,4);
         List<ElectricAppliance> kitchenElectricApplianceList = new ArrayList<>();
         kitchenElectricApplianceList.add(tableLamp);
