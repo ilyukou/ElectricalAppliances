@@ -4,7 +4,6 @@ import electricAppliance.model.Apartment;
 import electricAppliance.model.ElectricAppliance;
 import electricAppliance.model.Room;
 import electricAppliance.model.RoomType;
-import electricAppliance.model.electricAppliance.ElectricApplianceType;
 import electricAppliance.model.electricAppliance.home.MultimediaSpeakers;
 import electricAppliance.model.electricAppliance.home.TV;
 import electricAppliance.model.electricAppliance.kitchen.Microwave;
@@ -54,9 +53,9 @@ public class Creater {
         sportElectricApplianceList.add(sportCeilingLamp);
 
         // home
-        TV tv = new TV(300,"Atlant",ElectricApplianceType.Home,30,42);
+        TV tv = new TV(300,"Atlant",30,42);
         MultimediaSpeakers multimediaSpeakers = new MultimediaSpeakers(200,"Horizon",
-                ElectricApplianceType.Home, 120,5);
+                 120,5);
         List<ElectricAppliance> homeElectricApplianceList = new ArrayList<>();
         homeElectricApplianceList.add(tableLamp);
         homeElectricApplianceList.add(homeCeilingLamp);

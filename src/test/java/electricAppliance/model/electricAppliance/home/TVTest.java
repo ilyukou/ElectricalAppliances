@@ -1,6 +1,5 @@
 package electricAppliance.model.electricAppliance.home;
 
-import electricAppliance.model.electricAppliance.ElectricApplianceType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,7 +12,7 @@ class TVTest {
 
     @BeforeEach
     void setUp() {
-        tv = new TV(100,"Lg", ElectricApplianceType.Home,1,1);
+        tv = new TV(100,"Lg",1,1);
     }
 
     // test parent (HomeElectricAppliance.class) setter

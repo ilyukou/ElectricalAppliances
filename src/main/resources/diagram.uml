@@ -3,32 +3,109 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="96.5" y="319.0">model.electricAppliance.kitchen.KitchenElectricAppliance</node>
-    <node x="0.0" y="664.0">model.apartment.Apartment</node>
-    <node x="115.0" y="494.0">model.electricAppliance.kitchen.Microwave</node>
-    <node x="652.0" y="664.0">model.ElectricApplianceType</node>
-    <node x="284.0" y="664.0">model.Validator</node>
-    <node x="0.0" y="0.0">model.ElectricAppliance</node>
-    <node x="519.0" y="906.0">model.exception.NotEnoughFreeSockets</node>
-    <node x="0.0" y="906.0">Controller</node>
-    <node x="298.0" y="906.0">Main</node>
-    <node x="458.0" y="0.0">model.apartment.Room</node>
+    <node x="1018.0000000000001" y="712.0">electricAppliance.model.electricAppliance.lighting.CeilingLamp</node>
+    <node x="2111.0" y="955.0">electricAppliance.model.RoomType</node>
+    <node x="71.0" y="380.0">electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance</node>
+    <node x="466.0" y="955.0">electricAppliance.model.Apartment</node>
+    <node x="1150.0" y="0.0">electricAppliance.model.ElectricAppliance</node>
+    <node x="1495.0" y="955.0">electricAppliance.model.electricAppliance.lighting.LightBulbsType</node>
+    <node x="1127.0" y="955.0">electricAppliance.Validator</node>
+    <node x="0.0" y="955.0">electricAppliance.model.Room</node>
+    <node x="1564.25" y="380.0">electricAppliance.model.electricAppliance.home.HomeElectricAppliance</node>
+    <node x="1492.0" y="700.0">electricAppliance.model.electricAppliance.home.TV</node>
+    <node x="0.0" y="1414.0">electricAppliance.model.exception.NotEnoughFreeSockets</node>
+    <node x="2378.0" y="640.0">electricAppliance.model.electricAppliance.sport.Treadmill</node>
+    <node x="554.0000000000001" y="712.0">electricAppliance.model.electricAppliance.lighting.TableLamp</node>
+    <node x="0.0" y="688.0">electricAppliance.model.electricAppliance.kitchen.Stove</node>
+    <node x="1698.0" y="955.0">electricAppliance.model.electricAppliance.ElectricApplianceType</node>
+    <node x="2178.25" y="404.0">electricAppliance.model.electricAppliance.sport.SportElectricAppliance</node>
+    <node x="763.7115384615386" y="368.0">electricAppliance.model.electricAppliance.lighting.LightElectricAppliance</node>
+    <node x="1751.0" y="688.0">electricAppliance.model.electricAppliance.home.MultimediaSpeakers</node>
+    <node x="2091.0" y="712.0">electricAppliance.model.electricAppliance.sport.ExerciseBike</node>
+    <node x="2258.0" y="955.0">electricAppliance.model.comporators.ElectricApplianceComparatorByPower</node>
+    <node x="1936.0" y="955.0">electricAppliance.model.electricAppliance.lighting.LightCapType</node>
+    <node x="279.0" y="700.0">electricAppliance.model.electricAppliance.kitchen.Microwave</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="model.electricAppliance.kitchen.KitchenElectricAppliance" target="model.ElectricAppliance">
-      <point x="0.0" y="-62.5" />
-      <point x="0.0" y="134.5" />
+    <edge source="electricAppliance.model.electricAppliance.lighting.CeilingLamp" target="electricAppliance.model.electricAppliance.lighting.LightElectricAppliance">
+      <point x="0.0" y="-63.0" />
+      <point x="1245.0" y="615.0" />
+      <point x="1137.2115384615386" y="615.0" />
+      <point x="124.5" y="111.0" />
     </edge>
-    <edge source="model.electricAppliance.kitchen.Microwave" target="model.electricAppliance.kitchen.KitchenElectricAppliance">
-      <point x="0.0" y="-62.5" />
-      <point x="0.0" y="62.5" />
+    <edge source="electricAppliance.model.electricAppliance.lighting.TableLamp" target="electricAppliance.model.electricAppliance.lighting.LightElectricAppliance">
+      <point x="0.0" y="-63.0" />
+      <point x="776.0000000000001" y="615.0" />
+      <point x="888.2115384615386" y="615.0" />
+      <point x="-124.5" y="111.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.kitchen.Stove" target="electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance">
+      <point x="0.0" y="-87.0" />
+      <point x="129.5" y="615.0" />
+      <point x="169.5" y="615.0" />
+      <point x="-98.5" y="99.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.lighting.LightElectricAppliance" target="electricAppliance.model.ElectricAppliance">
+      <point x="0.0" y="-111.0" />
+      <point x="1012.7115384615386" y="348.0" />
+      <point x="1304.875" y="348.0" />
+      <point x="-51.625" y="159.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.sport.Treadmill" target="electricAppliance.model.electricAppliance.sport.SportElectricAppliance">
+      <point x="0.0" y="-135.0" />
+      <point x="2526.0" y="615.0" />
+      <point x="2473.75" y="615.0" />
+      <point x="98.5" y="75.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance" target="electricAppliance.model.ElectricAppliance">
+      <point x="0.0" y="-99.0" />
+      <point x="268.0" y="338.0" />
+      <point x="1201.625" y="338.0" />
+      <point x="-154.875" y="159.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.sport.SportElectricAppliance" target="electricAppliance.model.ElectricAppliance">
+      <point x="0.0" y="-75.0" />
+      <point x="2375.25" y="338.0" />
+      <point x="1511.375" y="338.0" />
+      <point x="154.875" y="159.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.home.TV" target="electricAppliance.model.electricAppliance.home.HomeElectricAppliance">
+      <point x="0.0" y="-75.0" />
+      <point x="1611.5" y="615.0" />
+      <point x="1662.75" y="615.0" />
+      <point x="-98.5" y="99.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.sport.ExerciseBike" target="electricAppliance.model.electricAppliance.sport.SportElectricAppliance">
+      <point x="0.0" y="-63.0" />
+      <point x="2224.5" y="615.0" />
+      <point x="2276.75" y="615.0" />
+      <point x="-98.5" y="75.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.kitchen.Microwave" target="electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance">
+      <point x="0.0" y="-75.0" />
+      <point x="406.5" y="615.0" />
+      <point x="366.5" y="615.0" />
+      <point x="98.5" y="99.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.home.HomeElectricAppliance" target="electricAppliance.model.ElectricAppliance">
+      <point x="0.0" y="-99.0" />
+      <point x="1761.25" y="348.0" />
+      <point x="1408.125" y="348.0" />
+      <point x="51.625" y="159.0" />
+    </edge>
+    <edge source="electricAppliance.model.electricAppliance.home.MultimediaSpeakers" target="electricAppliance.model.electricAppliance.home.HomeElectricAppliance">
+      <point x="0.0" y="-87.0" />
+      <point x="1911.0" y="615.0" />
+      <point x="1859.75" y="615.0" />
+      <point x="98.5" y="99.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="301.3333333333336" y="215.16666666666657" />
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="527.0" y="445.5" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
+    <Category>Constructors</Category>
     <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>

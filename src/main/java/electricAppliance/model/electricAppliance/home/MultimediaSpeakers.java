@@ -1,7 +1,6 @@
 package electricAppliance.model.electricAppliance.home;
 
 import electricAppliance.Validator;
-import electricAppliance.model.electricAppliance.ElectricApplianceType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,9 +10,9 @@ public class MultimediaSpeakers extends HomeElectricAppliance implements Cloneab
 
     private int numberOfSpeakers;
 
-    public MultimediaSpeakers(int power, String name, ElectricApplianceType electricApplianceType, int soundLevel,
+    public MultimediaSpeakers(int power, String name, int soundLevel,
                               int numberOfSpeakers) {
-        super(power, name, electricApplianceType, soundLevel);
+        super(power, name, soundLevel);
         setNumberOfSpeakers(numberOfSpeakers);
     }
 

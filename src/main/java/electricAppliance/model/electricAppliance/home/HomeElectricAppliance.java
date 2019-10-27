@@ -10,12 +10,12 @@ import org.apache.logging.log4j.Logger;
 public abstract class HomeElectricAppliance extends ElectricAppliance {
 
     private static final Logger logger = LogManager.getLogger(HomeElectricAppliance.class);
-
+    private static final ElectricApplianceType ELECTRIC_APPLIANCE_TYPE = ElectricApplianceType.Home;
     private int soundLevel;
 
-    public HomeElectricAppliance(int power, String name, ElectricApplianceType electricApplianceType,
+    public HomeElectricAppliance(int power, String name,
                                  int soundLevel) {
-        super(power, name, electricApplianceType);
+        super(power, name, ELECTRIC_APPLIANCE_TYPE);
         setSoundLevel(soundLevel);
     }
 

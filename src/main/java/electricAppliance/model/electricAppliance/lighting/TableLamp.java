@@ -1,10 +1,15 @@
 package electricAppliance.model.electricAppliance.lighting;
 
+import electricAppliance.Validator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class TableLamp extends LightElectricAppliance {
-    private double height;
+    private static final Logger logger = LogManager.getLogger(TableLamp.class);
+    private int height;
 
     public TableLamp(int power, String name, LightCapType lightCapType,
-                     LightBulbsType lightBulbsType, double height) {
+                     LightBulbsType lightBulbsType, int height) {
         super(power, name, lightCapType, lightBulbsType);
         setHeight(height);
     }
@@ -13,7 +18,13 @@ public class TableLamp extends LightElectricAppliance {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setHeight(int height) {
+
+        if(Validator.validate(height,0,Integer::compareTo)){
+            this.height = height;
+        }else {
+            logger.error("Height must be positive");
+            throw new IllegalArgumentException("Height must be positive");
+        }
     }
 }

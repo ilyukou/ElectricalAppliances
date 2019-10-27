@@ -1,6 +1,5 @@
 package electricAppliance.model.electricAppliance.home;
 
-import electricAppliance.model.electricAppliance.ElectricApplianceType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,9 +9,9 @@ public class TV extends HomeElectricAppliance implements Cloneable{
 
     private double screenDiagonal;
 
-    public TV(int power, String name, ElectricApplianceType electricApplianceType, int soundLevel,
+    public TV(int power, String name, int soundLevel,
               int screenDiagonal) {
-        super(power, name, electricApplianceType, soundLevel);
+        super(power, name, soundLevel);
         setScreenDiagonal(screenDiagonal);
     }
 
