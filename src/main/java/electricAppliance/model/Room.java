@@ -28,14 +28,18 @@ public class Room implements Cloneable{
     }
 
     public void setRoomType(RoomType roomType) {
-        this.roomType = roomType;
+        if(Validator.isNull(roomType)){
+            throw new IllegalArgumentException("RoomType is null");
+        }else {
+            this.roomType = roomType;
+        }
     }
 
     public boolean isFreeSocketsExist(){
         return getNumberOfSoket() > getElectricAppliances().size();
     }
 
-    public boolean isEnoughSocketsForElectricAppliance(int numberOfSoket, int appliancesListSize){
+    private boolean isEnoughSocketsForElectricAppliance(int numberOfSoket, int appliancesListSize){
         return numberOfSoket >= appliancesListSize;
     }
 
@@ -50,7 +54,7 @@ public class Room implements Cloneable{
         return power;
     }
 
-    private void addElectricalAppliances(ElectricAppliance electricAppliance) throws NotEnoughFreeSockets{
+    public void addElectricalAppliances(ElectricAppliance electricAppliance) throws NotEnoughFreeSockets{
         if(!isFreeSocketsExist()){
             logger.error("Not enough free sockets");
 
@@ -97,13 +101,19 @@ public class Room implements Cloneable{
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        Room room =  (Room) super.clone();
-        // Can i do this?
-        List<ElectricAppliance> electricAppliance = new ArrayList<>();
-        electricAppliance.addAll(getElectricAppliances());
-        room.electricAppliances = electricAppliances;
-        return room;
+    protected Object clone(){
+        try {
+            Room room =  (Room) super.clone();
+            // Can i do this?
+            List<ElectricAppliance> electricAppliance = new ArrayList<>();
+            electricAppliance.addAll(getElectricAppliances());
+            room.electricAppliances = electricAppliances;
+            return room;
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.error("Error while cloning");
+            return null;
+        }
     }
 
 }

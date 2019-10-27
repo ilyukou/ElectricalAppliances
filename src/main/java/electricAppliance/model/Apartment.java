@@ -31,16 +31,28 @@ public class Apartment implements Cloneable {
         this.rooms = rooms;
     }
 
-    public void addRoom(List<Room> rooms) {
+    public void addRooms(List<Room> rooms) {
         if (!Validator.isValidList(rooms)) {
-            logger.error("Exit from the addRoom() : List<Room> is null or size is 0");
-            // throw new E ????
+            logger.error("Exit from the addRooms() : List<Room> is null or size is 0");
+            throw new IllegalArgumentException("Exit from the addRooms() : List<Room> is null or size is 0");
         } else {
             List<Room> r = getRooms();
             r.addAll(rooms);
             setRooms(r);
         }
     }
+
+    public void addRoom(Room room){
+        if (!Validator.isNotNull(room)) {
+            logger.error("Exit from the addRoom() : Room  is null");
+            throw new IllegalArgumentException("Exit from the addRoom() : Room  is null");
+        } else {
+            List<Room> r = getRooms();
+            r.add(room);
+            setRooms(r);
+        }
+    }
+
 
     public int getPowerInRooms() {
         int power = 0;
@@ -54,7 +66,9 @@ public class Apartment implements Cloneable {
 
         List<ElectricAppliance> list = new ArrayList<>();
         for (Room r : getRooms()){
-            list.addAll(r.getElectricAppliances());
+            for (ElectricAppliance electricAppliance: r.getElectricAppliances()){
+                list.add(electricAppliance);
+            }
         }
         return list;
     }
@@ -73,6 +87,7 @@ public class Apartment implements Cloneable {
         logger.warn("Don't found ElectricAppliance with such parameters");
         return null;
     }
+
     public List<ElectricAppliance> sortElectricApplianceByPower(List<ElectricAppliance> list){
 
         logger.trace("Sorting start");
@@ -88,13 +103,20 @@ public class Apartment implements Cloneable {
 
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        Apartment apartment = (Apartment)super.clone();
-        // Can i do this?
-        List<Room> rooms = new ArrayList<>();
-        rooms.addAll(getRooms());
-        apartment.rooms = rooms;
+    public Object clone() {
+        try {
+            Apartment apartment = (Apartment)super.clone();
+            // Can i do this?
+            List<Room> rooms = new ArrayList<>();
+            rooms.addAll(getRooms());
+            apartment.rooms = rooms;
 
-        return apartment;
+            return apartment;
+        }catch (Exception e){
+            e.printStackTrace();
+            logger.warn("Error while clone(). return null");
+            return null;
+        }
+
     }
 }

@@ -1,3 +1,4 @@
+import electricAppliance.Creater;
 import electricAppliance.model.Apartment;
 import electricAppliance.model.ElectricAppliance;
 
@@ -6,8 +7,9 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws ClassNotFoundException, IOException {
-
+    public static void main(String[] args) throws ClassNotFoundException, IOException, CloneNotSupportedException {
+        //testClone();
+        sort();
         Creater creater = new Creater();
 
         // create Apartment with Rooms and ElectricAppliance in them
@@ -27,5 +29,28 @@ public class Main {
 
         System.out.println();
 
+    }
+    public static void testClone() throws CloneNotSupportedException {
+        Apartment apartment = Creater.createApartment();
+        System.out.println(apartment.getRooms().size());
+
+        Apartment newApart = (Apartment) apartment.clone();
+
+
+        apartment.addRooms(apartment.getRooms());
+        System.out.println(apartment.getRooms().size());
+        System.out.println(newApart.getRooms().size());
+
+
+        System.out.println();
+    }
+    public static void sort(){
+        Apartment apartment = Creater.createApartment();
+        List<ElectricAppliance> sort = apartment.sortElectricApplianceByPower(apartment.getAllElectricAppliance());
+
+        for (int i=1; i<sort.size(); i++){
+            System.out.println(sort.get(i).getPower());
+        }
+        System.out.println();
     }
 }

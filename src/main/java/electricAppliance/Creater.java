@@ -1,3 +1,5 @@
+package electricAppliance;
+
 import electricAppliance.model.Apartment;
 import electricAppliance.model.ElectricAppliance;
 import electricAppliance.model.Room;
