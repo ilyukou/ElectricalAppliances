@@ -18,6 +18,7 @@ public abstract class ElectricAppliance implements Cloneable{
         setName(name);
         setPower(power);
     }
+
     public int getPower() {
         return power;
     }

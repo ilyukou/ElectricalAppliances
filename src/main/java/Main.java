@@ -4,6 +4,7 @@ import model.apartment.Apartment;
 import model.apartment.Room;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public class Main {
@@ -19,8 +20,8 @@ public class Main {
 
         System.out.println(apartment.getPowerInRooms());
 
-        database.setObject(apartment);
-        database.setObject(apartment.getRooms());
+        Apartment apar = database.getApartment();
+        System.out.println();
 
     }
 }

@@ -24,6 +24,9 @@ public class Room implements Cloneable{
         setElectricAppliances(electricAppliances);
         setRoomType(roomType);
     }
+    public Room(){
+
+    }
 
     public RoomType getRoomType() {
         return roomType;

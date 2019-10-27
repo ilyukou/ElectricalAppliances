@@ -17,14 +17,10 @@ final class DatabaseFilePath {
         if (o instanceof Apartment) {
             return getApartmentFileUri();
 
-        } else if (o instanceof List ) {
-            List l = (List) o;
+        } else if (o instanceof Room ) {
 
-            if ( l.size() > 0
-                    && l.get(0) instanceof Room) {
-                return getRoomFileUri();
-            }
-            return null;
+            return getRoomFileUri();
+
 
         } else {
             return null;

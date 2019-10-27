@@ -13,6 +13,7 @@ public abstract class HomeElectricAppliance extends ElectricAppliance {
     }
 
 
+
     public double getSoundLevel() {
         return soundLevel;
     }

@@ -20,6 +20,9 @@ public class Apartment implements Cloneable {
         setRooms(rooms);
     }
 
+    public Apartment(){
+    }
+
     public List<Room> getRooms() {
         return rooms;
     }
