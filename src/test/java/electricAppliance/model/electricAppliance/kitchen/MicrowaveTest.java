@@ -15,34 +15,31 @@ class MicrowaveTest {
         microwave = new Microwave(100,"LG",ElectricApplianceType.Kitchen,5,30);
     }
 
+    // test parent (KitchenElectricAppliance.class) setter
+
+    @Test
+    void setCookingTime_whenCookingTimeValidate(){
+        microwave.setCookingTime(100);
+        assertEquals(100, microwave.getCookingTime());
+    }
+
+    @Test
+    void setCookingTime_whenCookingTimeUnValidate(){
+        Assertions.assertThrows(IllegalArgumentException.class, () ->{
+            microwave.setCookingTime(-100);
+        });
+    }
+
     @Test
     void setVolume_whenVolumeValidate() {
         microwave.setVolume(10);
         assertEquals(10,microwave.getVolume());
     }
 
-    // What the best solution ?
     @Test
     void setVolume_whenVolumeUnValidate() {
         Assertions.assertThrows(IllegalArgumentException.class , () -> {
             microwave.setVolume(-10);
         });
-    }
-
-    @Test
-    void setVolume_whenVolumeUnValidate1() {
-
-        assertThrows(IllegalArgumentException.class,
-                () -> microwave.setVolume(-10), Microwave.class +" size isn't validate");
-    }
-    @Test
-    void setVolume_whenVolumeUnValidate2() {
-
-        final String errorMessage = Microwave.class +" size isn't validate";
-
-        IllegalArgumentException e = Assertions.assertThrows(IllegalArgumentException.class,
-                () -> microwave.setVolume(-10));
-
-        assertEquals(errorMessage,e.getMessage());
     }
 }

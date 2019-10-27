@@ -5,7 +5,7 @@ import electricAppliance.Validator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Microwave extends KitchenElectricAppliance implements Cloneable{
+public class Microwave extends KitchenElectricAppliance {
 
     private static final Logger logger = LogManager.getLogger(Microwave.class);
 
@@ -31,8 +31,4 @@ public class Microwave extends KitchenElectricAppliance implements Cloneable{
         }
     }
 
-    @Override
-    protected Microwave clone() throws CloneNotSupportedException {
-        return (Microwave) super.clone();
-    }
 }

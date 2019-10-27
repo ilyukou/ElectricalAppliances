@@ -25,19 +25,13 @@ class StoveTest {
     @Test
     void setNumberOfBurners_whenBurnersNumbersMoreThanValidate(){
         Assertions.assertThrows(IllegalArgumentException.class , () -> {
+            stove.setNumberOfBurners(5);
+        });
+    }
+    @Test
+    void setNumberOfBurners_whenBurnersNumbersLessThanValidate(){
+        Assertions.assertThrows(IllegalArgumentException.class , () -> {
             stove.setNumberOfBurners(-1);
         });
     }
-
-    /*
-        MOCKITO SERVICE
-
-    private Stove stove = Mockito.mock(Stove.class);
-
-    @BeforeEach
-    void setUp(){
-        when(stove.getNumberOfBurners()).then();
-    }
-    */
-
 }
