@@ -22,8 +22,9 @@ class TableLampTest {
 
     @Test
     void setHeight_whenHeightIsNotValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-           tableLamp.setHeight(-10);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> tableLamp.setHeight(-10)
+        );
     }
 }

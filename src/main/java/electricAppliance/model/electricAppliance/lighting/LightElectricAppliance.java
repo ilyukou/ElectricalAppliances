@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 public abstract class LightElectricAppliance extends ElectricAppliance {
 
     private static final Logger logger = LogManager.getLogger(LightElectricAppliance.class);
-
     private static final ElectricApplianceType electricApplianceType = ElectricApplianceType.Light;
 
     private LightCapType lightCapType;
@@ -18,6 +17,7 @@ public abstract class LightElectricAppliance extends ElectricAppliance {
     public LightElectricAppliance(int power, String name, LightCapType lightCapType,
                                   LightBulbsType lightBulbsType) {
         super(power, name, electricApplianceType);
+        logger.info("Create class by constructor");
         setLightCapType(lightCapType);
         setLightBulbsType(lightBulbsType);
     }
@@ -27,14 +27,12 @@ public abstract class LightElectricAppliance extends ElectricAppliance {
     }
 
     public void setLightCapType(LightCapType lightCapType) {
-        if(Validator.isNotNull(lightCapType)){
+        if (Validator.isNotNull(lightCapType)) {
             this.lightCapType = lightCapType;
-        }else {
+        } else {
             logger.error("LightCapType is null");
             throw new IllegalArgumentException("LightCapType is null");
         }
-
-
     }
 
     public LightBulbsType getLightBulbsType() {
@@ -42,9 +40,9 @@ public abstract class LightElectricAppliance extends ElectricAppliance {
     }
 
     public void setLightBulbsType(LightBulbsType lightBulbsType) {
-        if(Validator.isNotNull(lightBulbsType)){
+        if (Validator.isNotNull(lightBulbsType)) {
             this.lightBulbsType = lightBulbsType;
-        }else {
+        } else {
             logger.error("LightBulbsType is null");
             throw new IllegalArgumentException("LightBulbsType is null");
         }

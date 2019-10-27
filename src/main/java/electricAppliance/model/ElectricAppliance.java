@@ -5,7 +5,7 @@ import electricAppliance.model.electricAppliance.ElectricApplianceType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public abstract class ElectricAppliance implements Cloneable{
+public abstract class ElectricAppliance implements Cloneable {
 
     private static final Logger logger = LogManager.getLogger(ElectricAppliance.class);
 
@@ -13,7 +13,10 @@ public abstract class ElectricAppliance implements Cloneable{
     private String name;
     private ElectricApplianceType electricApplianceType;
 
-    public ElectricAppliance(int power, String name, ElectricApplianceType electricApplianceType){
+    private final static int MIN_POWER = 0;
+
+    public ElectricAppliance(int power, String name, ElectricApplianceType electricApplianceType) {
+        logger.info("Create class by constructor");
         setElectricApplianceType(electricApplianceType);
         setName(name);
         setPower(power);
@@ -24,12 +27,11 @@ public abstract class ElectricAppliance implements Cloneable{
     }
 
     public void setPower(int power) throws IllegalArgumentException {
-        // можно ли так делать, если нету build() ?
-        if(Validator.validate(power,0,Integer::compareTo)){
+        if (Validator.validate(power, MIN_POWER, Integer::compareTo)) {
             this.power = power;
-        }else {
-            logger.error("int power : isn't validate");
-            throw new IllegalArgumentException(ElectricAppliance.class +" power isn't validate");
+        } else {
+            logger.error("int power isn't validate");
+            throw new IllegalArgumentException(ElectricAppliance.class + " power isn't validate");
         }
     }
 
@@ -38,11 +40,11 @@ public abstract class ElectricAppliance implements Cloneable{
     }
 
     public void setElectricApplianceType(ElectricApplianceType electricApplianceType) {
-        if(Validator.isNotNull(electricApplianceType)){
+        if (Validator.isNotNull(electricApplianceType)) {
             this.electricApplianceType = electricApplianceType;
-        }else {
-            logger.error(ElectricAppliance.class +" ElectricApplianceType isn't validate");
-            throw new IllegalArgumentException(ElectricAppliance.class +" size isn't validate");
+        } else {
+            logger.error(ElectricAppliance.class + " ElectricApplianceType isn't validate");
+            throw new IllegalArgumentException(ElectricAppliance.class + " size isn't validate");
         }
 
     }
@@ -58,13 +60,5 @@ public abstract class ElectricAppliance implements Cloneable{
             logger.error("String name : is empty");
             throw new IllegalArgumentException(ElectricAppliance.class + " : String name - is empty");
         }
-    }
-
-    @Override
-    protected ElectricAppliance clone() throws CloneNotSupportedException {
-        ElectricAppliance electricAppliance = (ElectricAppliance)super.clone();
-        electricAppliance.electricApplianceType = (ElectricApplianceType)super.clone();
-        electricAppliance.name = (String)super.clone(); // immutable str, meaby this don't need ??
-        return electricAppliance;
     }
 }

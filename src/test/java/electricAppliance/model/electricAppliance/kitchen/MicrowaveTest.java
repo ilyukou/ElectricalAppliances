@@ -24,9 +24,10 @@ class MicrowaveTest {
 
     @Test
     void setCookingTime_whenCookingTimeUnValidate(){
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-            microwave.setCookingTime(-100);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> microwave.setCookingTime(-100)
+        );
     }
 
     @Test
@@ -37,8 +38,9 @@ class MicrowaveTest {
 
     @Test
     void setVolume_whenVolumeUnValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            microwave.setVolume(-10);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class ,
+                () -> microwave.setVolume(-10)
+        );
     }
 }

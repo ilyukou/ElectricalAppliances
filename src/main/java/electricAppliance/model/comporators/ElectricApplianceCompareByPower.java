@@ -4,7 +4,7 @@ import electricAppliance.model.ElectricAppliance;
 
 import java.util.Comparator;
 
-public class ElectricApplianceComparatorByPower implements Comparator<ElectricAppliance> {
+public class ElectricApplianceCompareByPower implements Comparator<ElectricAppliance> {
 
     @Override
     public int compare(ElectricAppliance o1, ElectricAppliance o2) {
@@ -13,12 +13,12 @@ public class ElectricApplianceComparatorByPower implements Comparator<ElectricAp
          * return Integer.compare(o1.getPower(), o2.getPower();
          */
 
-        if (o1.getPower() > o2.getPower()){
-            return 1 ;
-        } else if (o1.getPower() < o2.getPower()){
-            return -1 ;
+        if (o1.getPower() > o2.getPower()) {
+            return 1;
+        } else if (o1.getPower() < o2.getPower()) {
+            return -1;
         } else {
-            return 0 ;
+            return 0;
         }
 
     }

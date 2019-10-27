@@ -4,9 +4,10 @@ import electricAppliance.Validator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class MultimediaSpeakers extends HomeElectricAppliance implements Cloneable{
+public class MultimediaSpeakers extends HomeElectricAppliance implements Cloneable {
 
     private static final Logger logger = LogManager.getLogger(MultimediaSpeakers.class);
+    private final static int MIN_NUMBERS_OF_SPEAKERS = 1;
 
     private int numberOfSpeakers;
 
@@ -21,25 +22,11 @@ public class MultimediaSpeakers extends HomeElectricAppliance implements Cloneab
     }
 
     public void setNumberOfSpeakers(final int numberOfSpeakers) {
-        if(Validator.validate(numberOfSpeakers,0,Integer::compareTo)){
+        if (Validator.validate(numberOfSpeakers, MIN_NUMBERS_OF_SPEAKERS, Integer::compareTo)) {
             this.numberOfSpeakers = numberOfSpeakers;
-
-        }else {
-            logger.error("Number of speakers might been positive");
-            throw new IllegalArgumentException("Number of speakers might been positive");
-        }
-
-    }
-
-    @Override
-    public MultimediaSpeakers clone() {
-        try {
-            MultimediaSpeakers multimediaSpeakers = (MultimediaSpeakers)super.clone();
-            return multimediaSpeakers;
-        }catch (Exception e){
-            e.printStackTrace();
-            logger.warn("Error while clone(). return null");
-            return null;
+        } else {
+            logger.error("Number of speakers must been more than minimum");
+            throw new IllegalArgumentException("Number of speakers must been more than minimum");
         }
 
     }

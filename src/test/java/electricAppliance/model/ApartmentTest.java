@@ -47,7 +47,8 @@ class ApartmentTest {
 
     @Test
     void addRooms_whenRoomsIsNotNull() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
+
         Room room = Mockito.mock(Room.class);
 
         List<Room> rooms = new ArrayList<>();
@@ -60,7 +61,7 @@ class ApartmentTest {
     }
     @Test
     void addRooms_whenRoomsIsNull() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
 
         List<Room> rooms = null;
 
@@ -71,7 +72,7 @@ class ApartmentTest {
 
     @Test
     void addRoom_whenRoomIsNotNull() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
         Room room = Mockito.mock(Room.class);
 
         apartment.addRoom(room);
@@ -80,7 +81,7 @@ class ApartmentTest {
 
     @Test
     void addRoom_whenRoomIsNull() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
         Room room = null;
 
 
@@ -92,19 +93,19 @@ class ApartmentTest {
 
     @Test
     void getPowerInRooms() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
         assertEquals(4520,apartment.getPowerInRooms());
     }
 
     @Test
     void getAllElectricAppliance() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
         assertEquals(12,apartment.getAllElectricAppliance().size());
     }
 
     @Test
     void searchElectricApplianceByPower_whenFound() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
 
         ElectricAppliance electricAppliance =
                 apartment.searchElectricApplianceByPower(apartment.getAllElectricAppliance(),480,520);
@@ -115,7 +116,7 @@ class ApartmentTest {
 
     @Test
     void searchElectricApplianceByPower_whenNotFound() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
 
         Assertions.assertThrows(NullPointerException.class , () -> {
             ElectricAppliance electricAppliance =
@@ -126,7 +127,7 @@ class ApartmentTest {
 
     @Test
     void sortElectricApplianceByPower() {
-        Apartment apartment = (Apartment) setUpApartment.clone();
+        Apartment apartment = Creater.createApartment();
 
         List<ElectricAppliance> sortedList = apartment
                 .sortElectricApplianceByPower(apartment.getAllElectricAppliance());
@@ -141,15 +142,4 @@ class ApartmentTest {
         assertTrue(actual);
     }
 
-    @Test
-    void testClone() {
-
-        int expected = setUpApartment.getRooms().size();
-
-        Apartment cloneApartment = (Apartment) setUpApartment.clone();
-
-        cloneApartment.addRooms(cloneApartment.getRooms());
-
-        assertNotEquals(setUpApartment.getRooms().size(),cloneApartment.getRooms().size());
-    }
 }

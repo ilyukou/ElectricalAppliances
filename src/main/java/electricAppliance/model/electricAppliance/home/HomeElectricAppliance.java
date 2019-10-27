@@ -11,40 +11,27 @@ public abstract class HomeElectricAppliance extends ElectricAppliance {
 
     private static final Logger logger = LogManager.getLogger(HomeElectricAppliance.class);
     private static final ElectricApplianceType ELECTRIC_APPLIANCE_TYPE = ElectricApplianceType.Home;
+    private final static int MIN_SOUND_LEVEL = 0;
+
     private int soundLevel;
 
     public HomeElectricAppliance(int power, String name,
                                  int soundLevel) {
         super(power, name, ELECTRIC_APPLIANCE_TYPE);
+        logger.info("Create class by constructor");
         setSoundLevel(soundLevel);
     }
-
-
 
     public double getSoundLevel() {
         return soundLevel;
     }
 
-    public void setSoundLevel(final int soundLevel) throws IllegalArgumentException{
-        if(Validator.validate(soundLevel,0,Integer::compareTo)){
+    public void setSoundLevel(final int soundLevel) throws IllegalArgumentException {
+        if (Validator.validate(soundLevel, MIN_SOUND_LEVEL, Integer::compareTo)) {
             this.soundLevel = soundLevel;
-        }else {
-            logger.error("int power : isn't validate");
-            throw new IllegalArgumentException(ElectricAppliance.class +" power isn't validate");
+        } else {
+            logger.error("Sound level must been more than minimum");
+            throw new IllegalArgumentException("Sound level must been more than minimum");
         }
     }
-
-    @Override
-    public HomeElectricAppliance clone() {
-        try {
-            HomeElectricAppliance apartment = (HomeElectricAppliance)super.clone();
-            return apartment;
-        }catch (Exception e){
-            e.printStackTrace();
-            logger.warn("Error while clone(). return null");
-            return null;
-        }
-
-    }
-
 }

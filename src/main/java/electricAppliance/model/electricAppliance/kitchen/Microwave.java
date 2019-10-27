@@ -7,12 +7,13 @@ import org.apache.logging.log4j.Logger;
 public class Microwave extends KitchenElectricAppliance {
 
     private static final Logger logger = LogManager.getLogger(Microwave.class);
+    private static final int MIN_VOLUME = 0;
 
     private int volume;
 
     public Microwave(int power, String name,
-                      int cookingTime, int volume) {
-        super(power,name,cookingTime);
+                     int cookingTime, int volume) {
+        super(power, name, cookingTime);
         logger.info("Create class by constructor");
         setVolume(volume);
     }
@@ -22,11 +23,11 @@ public class Microwave extends KitchenElectricAppliance {
     }
 
     public void setVolume(int volume) {
-        if(Validator.validate(volume,0,Integer::compareTo)){
+        if (Validator.validate(volume, MIN_VOLUME, Integer::compareTo)) {
             this.volume = volume;
-        }else {
-            logger.error("volume isn't validate");
-            throw new IllegalArgumentException(Microwave.class +" size isn't validate");
+        } else {
+            logger.error("The volume must be greater than the minimum");
+            throw new IllegalArgumentException("The volume must be greater than the minimum");
         }
     }
 

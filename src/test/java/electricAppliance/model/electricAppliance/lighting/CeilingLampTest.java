@@ -36,9 +36,10 @@ class CeilingLampTest {
 
     @Test
     void setLightBulbsType_whenLightBulbsTypeIsNull() {
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-           ceilingLamp.setLightBulbsType(null);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> ceilingLamp.setLightBulbsType(null)
+        );
     }
 
     @Test
@@ -49,8 +50,9 @@ class CeilingLampTest {
 
     @Test
     void setWeight_whenWeightIsNotValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-           ceilingLamp.setWeight(-10);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> ceilingLamp.setWeight(-10)
+        );
     }
 }

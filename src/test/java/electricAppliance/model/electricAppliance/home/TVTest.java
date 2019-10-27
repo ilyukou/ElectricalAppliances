@@ -24,9 +24,10 @@ class TVTest {
 
     @Test
     void setSoundLevel_whenSoundLevelNotValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            tv.setSoundLevel(-10);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class ,
+                () -> tv.setSoundLevel(-10)
+        );
     }
 
     @Test
@@ -38,8 +39,9 @@ class TVTest {
     @Test
     void setScreenDiagonal_whenScreenDiagonalNotValidate() {
 
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            tv.setScreenDiagonal(-100);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class ,
+                () -> tv.setScreenDiagonal(-100)
+        );
     }
 }

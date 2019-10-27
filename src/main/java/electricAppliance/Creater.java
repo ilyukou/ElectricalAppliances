@@ -14,28 +14,35 @@ import electricAppliance.model.electricAppliance.lighting.LightCapType;
 import electricAppliance.model.electricAppliance.lighting.TableLamp;
 import electricAppliance.model.electricAppliance.sport.ExerciseBike;
 import electricAppliance.model.electricAppliance.sport.Treadmill;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Creater {
+
+    private static final Logger logger = LogManager.getLogger(Creater.class);
+
     public static Apartment createApartment() {
 
-        // lighting
-        TableLamp tableLamp = new TableLamp(60,"Light", LightCapType.E27, LightBulbsType.LED,30);
+        logger.info("Create Apartment by createApartment()");
 
-        CeilingLamp kitchenCeilingLamp = new CeilingLamp(120,"Celight",LightCapType.E14,
-                LightBulbsType.Halogen,3);
-        CeilingLamp homeCeilingLamp = new CeilingLamp(80,"Celight",LightCapType.E14,
-                LightBulbsType.Halogen,3);
-        CeilingLamp sportCeilingLamp = new CeilingLamp(150,"Celight",LightCapType.E14,
-                LightBulbsType.Halogen,3);
+        // lighting
+        TableLamp tableLamp = new TableLamp(60, "Light", LightCapType.E27, LightBulbsType.LED, 30);
+
+        CeilingLamp kitchenCeilingLamp = new CeilingLamp(120, "Celight", LightCapType.E14,
+                LightBulbsType.Halogen, 3);
+        CeilingLamp homeCeilingLamp = new CeilingLamp(80, "Celight", LightCapType.E14,
+                LightBulbsType.Halogen, 3);
+        CeilingLamp sportCeilingLamp = new CeilingLamp(150, "Celight", LightCapType.E14,
+                LightBulbsType.Halogen, 3);
 
         // kitchen
-        Microwave microwave = new Microwave(1000,"Lg",
-                3,20);
-        Stove stove = new Stove(1500,"Samsung",
-                60,4);
+        Microwave microwave = new Microwave(1000, "Lg",
+                3, 20);
+        Stove stove = new Stove(1500, "Samsung",
+                60, 4);
         List<ElectricAppliance> kitchenElectricApplianceList = new ArrayList<>();
         kitchenElectricApplianceList.add(tableLamp);
         kitchenElectricApplianceList.add(stove);
@@ -43,9 +50,9 @@ public class Creater {
         kitchenElectricApplianceList.add(kitchenCeilingLamp);
 
         // sport
-        ExerciseBike exerciseBike = new ExerciseBike(400,"GymBike",150,40);
-        Treadmill treadmill = new Treadmill(500,"TreadGym",150,25,
-                100,150);
+        ExerciseBike exerciseBike = new ExerciseBike(400, "GymBike", 150, 40);
+        Treadmill treadmill = new Treadmill(500, "TreadGym", 150, 25,
+                100, 150);
         List<ElectricAppliance> sportElectricApplianceList = new ArrayList<>();
         sportElectricApplianceList.add(exerciseBike);
         sportElectricApplianceList.add(treadmill);
@@ -53,9 +60,9 @@ public class Creater {
         sportElectricApplianceList.add(sportCeilingLamp);
 
         // home
-        TV tv = new TV(300,"Atlant",30,42);
-        MultimediaSpeakers multimediaSpeakers = new MultimediaSpeakers(200,"Horizon",
-                 120,5);
+        TV tv = new TV(300, "Atlant", 30, 42);
+        MultimediaSpeakers multimediaSpeakers = new MultimediaSpeakers(200, "Horizon",
+                120, 5);
         List<ElectricAppliance> homeElectricApplianceList = new ArrayList<>();
         homeElectricApplianceList.add(tableLamp);
         homeElectricApplianceList.add(homeCeilingLamp);
@@ -65,10 +72,10 @@ public class Creater {
 
         List<Room> rooms = new ArrayList<>();
         try {
-            rooms.add(new Room(sportElectricApplianceList,6, RoomType.Sport));
-            rooms.add(new Room(kitchenElectricApplianceList,7,RoomType.Kitchen));
-            rooms.add(new Room(homeElectricApplianceList,7,RoomType.LivingRoom));
-        }catch (Exception e){
+            rooms.add(new Room(sportElectricApplianceList, 6, RoomType.Sport));
+            rooms.add(new Room(kitchenElectricApplianceList, 7, RoomType.Kitchen));
+            rooms.add(new Room(homeElectricApplianceList, 7, RoomType.LivingRoom));
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

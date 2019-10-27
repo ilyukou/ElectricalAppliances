@@ -23,9 +23,10 @@ class ExerciseBikeTest {
 
     @Test
     void setMaxUserWeight_whenMaxUserWeight_UnValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-           exerciseBike.setMaxUserWeight(-100);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> exerciseBike.setMaxUserWeight(-100)
+        );
     }
 
     @Test
@@ -36,8 +37,9 @@ class ExerciseBikeTest {
 
     @Test
     void setMaxSpeed_whenMaxSpeedUnValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            exerciseBike.setMaxSpeed(-30);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> exerciseBike.setMaxSpeed(-30)
+        );
     }
 }

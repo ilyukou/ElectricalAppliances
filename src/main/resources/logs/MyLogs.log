@@ -196,3 +196,84 @@
 2019-10-27 19:25:01.591 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
 2019-10-27 19:25:01.616 [main] ERROR electricAppliance.model.electricAppliance.lighting.TableLamp - Height must be positive
 2019-10-27 19:25:01.653 [main] ERROR electricAppliance.model.electricAppliance.home.HomeElectricAppliance - int power : isn't validate
+2019-10-27 23:49:47.343 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:47.351 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-10-27 23:49:47.371 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:47.382 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
+2019-10-27 23:49:47.388 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:47.429 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:59.645 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:59.655 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-10-27 23:49:59.664 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:59.685 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
+2019-10-27 23:49:59.703 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:59.728 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 23:49:59.742 [main] ERROR electricAppliance.model.electricAppliance.lighting.CeilingLamp - Weight must be greater than the minimum
+2019-10-27 23:49:59.753 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightBulbsType is null
+2019-10-27 23:49:59.769 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightCapType is null
+2019-10-27 23:49:59.865 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - The volume must be greater than the minimum
+2019-10-27 23:49:59.882 [main] ERROR electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance - cookingTime isn't validate
+2019-10-27 23:50:00.057 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - Number of burners must be greater than the minimum
+2019-10-27 23:50:00.080 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - Number of burners must be greater than the minimum
+2019-10-27 23:50:00.098 [main] ERROR electricAppliance.model.electricAppliance.home.MultimediaSpeakers - Number of speakers might been positive
+2019-10-27 23:50:00.126 [main] ERROR electricAppliance.model.Apartment - Exit from the addRooms() : List<Room> is null or size is 0
+2019-10-27 23:50:00.306 [main] WARN  electricAppliance.model.Apartment - Don't found ElectricAppliance with such parameters
+2019-10-27 23:50:00.326 [main] ERROR electricAppliance.model.Apartment - Exit from the addRoom() : Room  is null
+2019-10-27 23:50:00.332 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-10-27 23:50:00.348 [main] ERROR electricAppliance.model.electricAppliance.lighting.TableLamp - Height must be greater than the minimum
+2019-10-27 23:50:00.403 [main] ERROR electricAppliance.model.electricAppliance.home.TV - Screen diagonal must been more than minimum
+2019-10-27 23:50:00.407 [main] ERROR electricAppliance.model.electricAppliance.home.HomeElectricAppliance - int power : isn't validate
+2019-10-28 00:01:02.846 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - The volume must be greater than the minimum
+2019-10-28 00:01:02.853 [main] ERROR electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance - cookingTime isn't validate
+2019-10-28 00:01:03.453 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - Number of burners must be greater than the minimum
+2019-10-28 00:01:03.456 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - Number of burners must be greater than the minimum
+2019-10-28 00:01:03.465 [main] ERROR electricAppliance.model.ElectricAppliance - int power : isn't validate
+2019-10-28 00:01:03.475 [main] ERROR electricAppliance.model.ElectricAppliance - class electricAppliance.model.ElectricAppliance ElectricApplianceType isn't validate
+2019-10-28 00:01:03.478 [main] ERROR electricAppliance.model.ElectricAppliance - String name : is empty
+2019-10-28 00:01:03.482 [main] ERROR electricAppliance.model.electricAppliance.home.MultimediaSpeakers - Number of speakers might been positive
+2019-10-28 00:01:03.527 [main] ERROR electricAppliance.model.Apartment - Exit from the addRooms() : List<Room> is null or size is 0
+2019-10-28 00:01:03.635 [main] WARN  electricAppliance.model.Apartment - Don't found ElectricAppliance with such parameters
+2019-10-28 00:01:03.646 [main] ERROR electricAppliance.model.Apartment - Exit from the addRoom() : Room  is null
+2019-10-28 00:01:03.657 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-10-28 00:01:03.671 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-28 00:01:03.674 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-10-28 00:01:03.680 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-28 00:01:03.684 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
+2019-10-28 00:01:03.688 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-28 00:01:03.703 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-28 00:01:03.708 [main] ERROR electricAppliance.model.electricAppliance.lighting.TableLamp - Height must be greater than the minimum
+2019-10-28 00:01:03.713 [main] ERROR electricAppliance.model.electricAppliance.home.TV - Screen diagonal must been more than minimum
+2019-10-28 00:01:03.715 [main] ERROR electricAppliance.model.electricAppliance.home.HomeElectricAppliance - int power : isn't validate
+2019-10-28 00:01:03.723 [main] ERROR electricAppliance.model.electricAppliance.lighting.CeilingLamp - Weight must be greater than the minimum
+2019-10-28 00:01:03.726 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightBulbsType is null
+2019-10-28 00:01:03.728 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightCapType is null
+2019-10-28 00:19:33.314 [main] ERROR electricAppliance.model.Room - Number of sockets is 2 . You want using 3 ElectricAppliances in this Room
+2019-10-28 00:20:10.309 [main] ERROR electricAppliance.model.Room - Number of sockets is 2 . You want using 3 ElectricAppliances in this Room
+2019-10-28 00:43:34.241 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - The volume must be greater than the minimum
+2019-10-28 00:43:34.246 [main] ERROR electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance - Cooking time must been more than minimum
+2019-10-28 00:43:34.253 [main] ERROR electricAppliance.model.electricAppliance.sport.SportElectricAppliance - Max user weight must be greater than the minimum
+2019-10-28 00:43:34.260 [main] ERROR electricAppliance.model.electricAppliance.sport.ExerciseBike - Max speed must be greater than the minimum
+2019-10-28 00:43:34.266 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - Number of burners must be greater than the minimum and less than maximum
+2019-10-28 00:43:34.268 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - Number of burners must be greater than the minimum and less than maximum
+2019-10-28 00:43:34.277 [main] ERROR electricAppliance.model.ElectricAppliance - int power isn't validate
+2019-10-28 00:43:34.287 [main] ERROR electricAppliance.model.ElectricAppliance - class electricAppliance.model.ElectricAppliance ElectricApplianceType isn't validate
+2019-10-28 00:43:34.290 [main] ERROR electricAppliance.model.ElectricAppliance - String name : is empty
+2019-10-28 00:43:34.293 [main] ERROR electricAppliance.model.electricAppliance.home.MultimediaSpeakers - Number of speakers must been more than minimum
+2019-10-28 00:43:34.302 [main] ERROR electricAppliance.model.electricAppliance.sport.Treadmill - Track max speed must be greater than the minimum
+2019-10-28 00:43:34.323 [main] ERROR electricAppliance.model.electricAppliance.sport.Treadmill - Track width must be greater than the minimum
+2019-10-28 00:43:34.379 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-10-28 00:43:34.595 [main] WARN  electricAppliance.model.Apartment - Don't found ElectricAppliance with such parameters
+2019-10-28 00:43:34.634 [main] ERROR electricAppliance.model.Apartment - Exit from the addRoom() : Room  is null
+2019-10-28 00:43:34.639 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-10-28 00:43:34.684 [main] ERROR electricAppliance.model.Room - Number of sockets is 2 . You using 4ElectricAppliances in this Room
+2019-10-28 00:43:34.687 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-10-28 00:43:34.707 [main] ERROR electricAppliance.model.Room - Number of sockets is 2 . You want using 3 ElectricAppliances in this Room
+2019-10-28 00:43:34.712 [main] ERROR electricAppliance.model.Room - Number of sockets must be greater than the minimum and less than maximum
+2019-10-28 00:43:34.717 [main] ERROR electricAppliance.model.Room - RoomType is null
+2019-10-28 00:43:34.747 [main] ERROR electricAppliance.model.Room - Number of sockets is 2 . You want using 3 ElectricAppliances in this Room
+2019-10-28 00:43:34.762 [main] ERROR electricAppliance.model.electricAppliance.lighting.TableLamp - Height must be greater than the minimum
+2019-10-28 00:43:34.781 [main] ERROR electricAppliance.model.electricAppliance.home.TV - Screen diagonal must been more than minimum
+2019-10-28 00:43:34.784 [main] ERROR electricAppliance.model.electricAppliance.home.HomeElectricAppliance - Sound level must been more than minimum
+2019-10-28 00:43:34.796 [main] ERROR electricAppliance.model.electricAppliance.lighting.CeilingLamp - Weight must be greater than the minimum
+2019-10-28 00:43:34.803 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightBulbsType is null
+2019-10-28 00:43:34.811 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightCapType is null

@@ -23,14 +23,16 @@ class StoveTest {
 
     @Test
     void setNumberOfBurners_whenBurnersNumbersMoreThanValidate(){
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            stove.setNumberOfBurners(5);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class ,
+                () -> stove.setNumberOfBurners(5)
+        );
     }
     @Test
     void setNumberOfBurners_whenBurnersNumbersLessThanValidate(){
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            stove.setNumberOfBurners(-1);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class ,
+                () -> stove.setNumberOfBurners(-1)
+        );
     }
 }

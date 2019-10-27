@@ -22,9 +22,10 @@ class TreadmillTest {
 
     @Test
     void setTrackMaxSpeed_whenTrackMaxSpeedUnValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-           treadmill.setTrackMaxSpeed(-10);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> treadmill.setTrackMaxSpeed(-10)
+        );
     }
 
     @Test
@@ -35,9 +36,10 @@ class TreadmillTest {
 
     @Test
     void setTrackWidth_whenTrackWidthUnValidate() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-           treadmill.setTrackWidth(-14);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> treadmill.setTrackWidth(-14)
+        );
     }
 
     @Test
@@ -48,8 +50,9 @@ class TreadmillTest {
 
     @Test
     void setTrackLength_whenTrackWidthUnLength() {
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-           treadmill.setTrackLength(-16);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> treadmill.setTrackLength(-16)
+        );
     }
 }

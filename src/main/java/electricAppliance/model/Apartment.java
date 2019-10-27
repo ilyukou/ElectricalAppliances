@@ -15,7 +15,7 @@ public class Apartment implements Cloneable {
             Comparator.comparing(ElectricAppliance::getPower);
     private List<Room> rooms;
 
-    public Apartment(List<Room> rooms){
+    public Apartment(List<Room> rooms) {
         logger.info("Create class by constructor");
         setRooms(rooms);
     }
@@ -33,27 +33,26 @@ public class Apartment implements Cloneable {
     }
 
     public void addRooms(List<Room> rooms) {
-        if (!Validator.isValidList(rooms)) {
-            logger.error("Exit from the addRooms() : List<Room> is null or size is 0");
-            throw new IllegalArgumentException("Exit from the addRooms() : List<Room> is null or size is 0");
-        } else {
+        if (Validator.isValidList(rooms)) {
             List<Room> r = getRooms();
             r.addAll(rooms);
             setRooms(r);
+        } else {
+            logger.error("List<Room> is null or size is 0");
+            throw new IllegalArgumentException("List<Room> is null or size is 0");
         }
     }
 
-    public void addRoom(Room room){
-        if (!Validator.isNotNull(room)) {
-            logger.error("Exit from the addRoom() : Room  is null");
-            throw new IllegalArgumentException("Exit from the addRoom() : Room  is null");
-        } else {
+    public void addRoom(Room room) {
+        if (Validator.isNotNull(room)) {
             List<Room> r = getRooms();
             r.add(room);
             setRooms(r);
+        } else {
+            logger.error("Exit from the addRoom() : Room  is null");
+            throw new IllegalArgumentException("Exit from the addRoom() : Room  is null");
         }
     }
-
 
     public int getPowerInRooms() {
         int power = 0;
@@ -63,23 +62,23 @@ public class Apartment implements Cloneable {
         return power;
     }
 
-    public List<ElectricAppliance> getAllElectricAppliance(){
+    public List<ElectricAppliance> getAllElectricAppliance() {
 
         List<ElectricAppliance> list = new ArrayList<>();
-        for (Room r : getRooms()){
+        for (Room r : getRooms()) {
             list.addAll(r.getElectricAppliances());
         }
         return list;
     }
 
     public ElectricAppliance searchElectricApplianceByPower(List<ElectricAppliance> list,
-                                                            int min, int max){
+                                                            int min, int max) {
         //return first found electric appliance with requested parameters
 
         ElectricAppliance foundElectricAppliance;
 
-        for (ElectricAppliance electricAppliance : list){
-            if(Validator.validate(electricAppliance.getPower(),min,max, Integer::compareTo)){
+        for (ElectricAppliance electricAppliance : list) {
+            if (Validator.validate(electricAppliance.getPower(), min, max, Integer::compareTo)) {
                 return electricAppliance;
             }
         }
@@ -87,7 +86,7 @@ public class Apartment implements Cloneable {
         return null;
     }
 
-    public List<ElectricAppliance> sortElectricApplianceByPower(List<ElectricAppliance> list){
+    public List<ElectricAppliance> sortElectricApplianceByPower(List<ElectricAppliance> list) {
 
         logger.trace("Sorting start");
 
@@ -96,24 +95,5 @@ public class Apartment implements Cloneable {
         logger.trace("Sorting ended");
 
         return list;
-    }
-
-
-    @Override
-    public Object clone() {
-        try {
-            Apartment apartment = (Apartment)super.clone();
-            // Can i do this?
-            List<Room> rooms = new ArrayList<>();
-            rooms.addAll(getRooms());
-            apartment.rooms = rooms;
-
-            return apartment;
-        }catch (Exception e){
-            e.printStackTrace();
-            logger.warn("Error while clone(). return null");
-            return null;
-        }
-
     }
 }

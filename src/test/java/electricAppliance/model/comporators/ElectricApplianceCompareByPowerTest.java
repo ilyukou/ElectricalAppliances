@@ -7,12 +7,12 @@ import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-class ElectricApplianceComparatorByPowerTest {
+class ElectricApplianceCompareByPowerTest {
 
     private ElectricAppliance first = Mockito.mock(ElectricAppliance.class);
     private ElectricAppliance second = Mockito.mock(ElectricAppliance.class);
 
-    private ElectricApplianceComparatorByPower comparatorByPower = new ElectricApplianceComparatorByPower();
+    private ElectricApplianceCompareByPower comparatorByPower = new ElectricApplianceCompareByPower();
 
     @Test
     void compare_whenFirstMoreThanSecond() {
