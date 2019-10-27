@@ -152,3 +152,31 @@
 2019-59-27 13:59:19.944 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
 2019-59-27 13:59:19.949 [main] ERROR electricAppliance.model.Room - Not enough free sockets
 2019-59-27 13:59:19.975 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-23-27 16:23:49.846 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-23-27 16:23:49.851 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-23-27 16:23:49.878 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-23-27 16:23:50.576 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-23-27 16:23:50.634 [main] ERROR electricAppliance.model.Apartment - Exit from the addRooms() : List<Room> is null or size is 0
+2019-23-27 16:23:50.748 [main] WARN  electricAppliance.model.Apartment - Don't found ElectricAppliance with such parameters
+2019-23-27 16:23:50.756 [main] ERROR electricAppliance.model.Apartment - Exit from the addRoom() : Room  is null
+2019-23-27 16:23:50.760 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-23-27 16:23:50.774 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-23-27 16:23:50.777 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-23-27 16:23:50.786 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-23-27 16:23:50.790 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
+2019-23-27 16:23:50.794 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-23-27 16:23:50.805 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-24-27 16:24:15.931 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-24-27 16:24:15.962 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-24-27 16:24:15.977 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-24-27 16:24:16.811 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-24-27 16:24:16.828 [main] ERROR electricAppliance.model.Apartment - Exit from the addRooms() : List<Room> is null or size is 0
+2019-24-27 16:24:16.932 [main] WARN  electricAppliance.model.Apartment - Don't found ElectricAppliance with such parameters
+2019-24-27 16:24:16.946 [main] ERROR electricAppliance.model.Apartment - Exit from the addRoom() : Room  is null
+2019-24-27 16:24:16.956 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-24-27 16:24:16.989 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-24-27 16:24:16.992 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-24-27 16:24:17.005 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-24-27 16:24:17.008 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
+2019-24-27 16:24:17.011 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-24-27 16:24:17.039 [main] ERROR electricAppliance.model.Room - Not enough free sockets
