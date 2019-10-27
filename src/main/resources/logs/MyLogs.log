@@ -158,3 +158,41 @@
 2019-10-27 18:07:11.283 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
 2019-10-27 18:07:11.296 [main] ERROR electricAppliance.model.electricAppliance.lighting.TableLamp - Height must be positive
 2019-10-27 18:07:11.341 [main] ERROR electricAppliance.model.electricAppliance.home.HomeElectricAppliance - int power : isn't validate
+2019-10-27 19:10:24.490 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:10:24.494 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-10-27 19:10:24.507 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:10:24.511 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
+2019-10-27 19:10:24.515 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:10:24.530 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:10:24.539 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightBulbsType is null
+2019-10-27 19:10:24.543 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightCapType is null
+2019-10-27 19:10:24.610 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-10-27 19:10:24.615 [main] ERROR electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance - cookingTime isn't validate
+2019-10-27 19:10:24.717 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-10-27 19:10:24.722 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-10-27 19:10:24.748 [main] ERROR electricAppliance.model.electricAppliance.home.MultimediaSpeakers - Number of speakers might been positive
+2019-10-27 19:10:24.767 [main] ERROR electricAppliance.model.Apartment - Exit from the addRooms() : List<Room> is null or size is 0
+2019-10-27 19:10:24.937 [main] WARN  electricAppliance.model.Apartment - Don't found ElectricAppliance with such parameters
+2019-10-27 19:10:24.953 [main] ERROR electricAppliance.model.Apartment - Exit from the addRoom() : Room  is null
+2019-10-27 19:10:24.959 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-10-27 19:10:24.989 [main] ERROR electricAppliance.model.electricAppliance.lighting.TableLamp - Height must be positive
+2019-10-27 19:10:25.077 [main] ERROR electricAppliance.model.electricAppliance.home.HomeElectricAppliance - int power : isn't validate
+2019-10-27 19:25:01.100 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:25:01.104 [main] WARN  electricAppliance.model.Room - You using all sockets in this room.
+2019-10-27 19:25:01.116 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:25:01.120 [main] ERROR electricAppliance.model.Room - Rooms size isn't validate
+2019-10-27 19:25:01.124 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:25:01.145 [main] ERROR electricAppliance.model.Room - Not enough free sockets
+2019-10-27 19:25:01.157 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightBulbsType is null
+2019-10-27 19:25:01.167 [main] ERROR electricAppliance.model.electricAppliance.lighting.LightElectricAppliance - LightCapType is null
+2019-10-27 19:25:01.219 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Microwave - volume isn't validate
+2019-10-27 19:25:01.224 [main] ERROR electricAppliance.model.electricAppliance.kitchen.KitchenElectricAppliance - cookingTime isn't validate
+2019-10-27 19:25:01.328 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-10-27 19:25:01.335 [main] ERROR electricAppliance.model.electricAppliance.kitchen.Stove - number Of burners isn't validate
+2019-10-27 19:25:01.352 [main] ERROR electricAppliance.model.electricAppliance.home.MultimediaSpeakers - Number of speakers might been positive
+2019-10-27 19:25:01.375 [main] ERROR electricAppliance.model.Apartment - Exit from the addRooms() : List<Room> is null or size is 0
+2019-10-27 19:25:01.570 [main] WARN  electricAppliance.model.Apartment - Don't found ElectricAppliance with such parameters
+2019-10-27 19:25:01.588 [main] ERROR electricAppliance.model.Apartment - Exit from the addRoom() : Room  is null
+2019-10-27 19:25:01.591 [main] ERROR electricAppliance.model.Apartment - List<Room> is null or size is 0
+2019-10-27 19:25:01.616 [main] ERROR electricAppliance.model.electricAppliance.lighting.TableLamp - Height must be positive
+2019-10-27 19:25:01.653 [main] ERROR electricAppliance.model.electricAppliance.home.HomeElectricAppliance - int power : isn't validate

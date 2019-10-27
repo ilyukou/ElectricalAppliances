@@ -32,6 +32,6 @@ public class Validator {
     }
 
     public static <T> boolean isValidList(List<T> t){
-        return ( Validator.isNotNull(t) ) && ( t.size() > 0 );
+        return  Validator.isNotNull(t)  &&  t.size() > 0 ;
     }
 }

@@ -22,8 +22,9 @@ class MultimediaSpeakersTest {
     @Test
     void setNumberOfSpeakers_whenNumberIsNotValidate() {
 
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            multimediaSpeakers.setNumberOfSpeakers(-3);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class ,
+                () -> multimediaSpeakers.setNumberOfSpeakers(-3)
+        );
     }
 }

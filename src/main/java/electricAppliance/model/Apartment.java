@@ -11,7 +11,8 @@ import java.util.List;
 public class Apartment implements Cloneable {
 
     private static final Logger logger = LogManager.getLogger(Apartment.class);
-
+    private static final Comparator<ElectricAppliance> COMPARATOR =
+            Comparator.comparing(ElectricAppliance::getPower);
     private List<Room> rooms;
 
     public Apartment(List<Room> rooms){
@@ -66,9 +67,7 @@ public class Apartment implements Cloneable {
 
         List<ElectricAppliance> list = new ArrayList<>();
         for (Room r : getRooms()){
-            for (ElectricAppliance electricAppliance: r.getElectricAppliances()){
-                list.add(electricAppliance);
-            }
+            list.addAll(r.getElectricAppliances());
         }
         return list;
     }
@@ -92,9 +91,7 @@ public class Apartment implements Cloneable {
 
         logger.trace("Sorting start");
 
-        Comparator<ElectricAppliance> comparator = Comparator.comparing(ElectricAppliance::getPower);
-
-        list.sort(comparator);
+        list.sort(COMPARATOR);
 
         logger.trace("Sorting ended");
 

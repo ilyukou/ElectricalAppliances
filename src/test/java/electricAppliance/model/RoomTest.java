@@ -1,14 +1,14 @@
 package electricAppliance.model;
 
 import electricAppliance.Creater;
-import electricAppliance.model.exception.NotEnoughFreeSockets;
-import org.junit.jupiter.api.AfterEach;
+import electricAppliance.model.exception.NotEnoughFreeSocketsException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,14 +40,16 @@ class RoomTest {
     @Test
     void isFreeSocketsExist_whenSocketsIsNotExist() {
         Room r = (Room) room.clone();
-        List<ElectricAppliance> electricAppliances = new ArrayList<>();
-        electricAppliances.add(Mockito.mock(ElectricAppliance.class));
-        electricAppliances.add(Mockito.mock(ElectricAppliance.class));
-        electricAppliances.add(Mockito.mock(ElectricAppliance.class));
+        List<ElectricAppliance> electricAppliances = Arrays.asList(
+                Mockito.mock(ElectricAppliance.class),
+                Mockito.mock(ElectricAppliance.class),
+                Mockito.mock(ElectricAppliance.class)
+
+        );
 
         r.setNumberOfSoket(2);
 
-        Assertions.assertThrows(NotEnoughFreeSockets.class , () -> {
+        Assertions.assertThrows(NotEnoughFreeSocketsException.class , () -> {
             r.setElectricAppliances(electricAppliances);
         });
     }
@@ -63,8 +65,8 @@ class RoomTest {
 
         try {
             Room room = new Room(electricAppliances,3, RoomType.LivingRoom);
-        } catch (NotEnoughFreeSockets notEnoughFreeSockets) {
-            notEnoughFreeSockets.printStackTrace();
+        } catch (NotEnoughFreeSocketsException notEnoughFreeSocketsException) {
+            notEnoughFreeSocketsException.printStackTrace();
         }
 
         assertTrue(room.isFreeSocketsExist());
@@ -90,8 +92,8 @@ class RoomTest {
             r.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
 
             assertEquals(2,r.getElectricAppliances().size());
-        } catch (NotEnoughFreeSockets notEnoughFreeSockets) {
-            notEnoughFreeSockets.printStackTrace();
+        } catch (NotEnoughFreeSocketsException notEnoughFreeSocketsException) {
+            notEnoughFreeSocketsException.printStackTrace();
             assertTrue(false);
         }
 
@@ -103,7 +105,7 @@ class RoomTest {
         Room r = (Room) room.clone();
         r.setNumberOfSoket(2);
 
-        Assertions.assertThrows(NotEnoughFreeSockets.class , () -> {
+        Assertions.assertThrows(NotEnoughFreeSocketsException.class , () -> {
             r.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
             r.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
             r.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
@@ -119,7 +121,7 @@ class RoomTest {
         electricAppliances.add(Mockito.mock(ElectricAppliance.class));
         electricAppliances.add(Mockito.mock(ElectricAppliance.class));
 
-        Assertions.assertThrows(NotEnoughFreeSockets.class , () -> {
+        Assertions.assertThrows(NotEnoughFreeSocketsException.class , () -> {
             Room room = new Room(electricAppliances,2,RoomType.LivingRoom);
         });
     }
@@ -133,7 +135,7 @@ class RoomTest {
 
 
 
-        Assertions.assertThrows(NotEnoughFreeSockets.class , () -> {
+        Assertions.assertThrows(NotEnoughFreeSocketsException.class , () -> {
             Room room = new Room(electricAppliances,2,RoomType.LivingRoom);
         });
 
@@ -149,8 +151,8 @@ class RoomTest {
         try {
             r = new Room(electricAppliances,3, RoomType.LivingRoom);
             r.setNumberOfSoket(5);
-        } catch (NotEnoughFreeSockets notEnoughFreeSockets) {
-            notEnoughFreeSockets.printStackTrace();
+        } catch (NotEnoughFreeSocketsException notEnoughFreeSocketsException) {
+            notEnoughFreeSocketsException.printStackTrace();
         }
 
         assertEquals(5,r.getNumberOfSoket());

@@ -1,13 +1,13 @@
 package electricAppliance.model;
 
 import electricAppliance.Validator;
-import electricAppliance.model.exception.NotEnoughFreeSockets;
+import electricAppliance.model.exception.NotEnoughFreeSocketsException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Room implements Cloneable{
+public class Room  {
 
     private static final Logger logger = LogManager.getLogger(Room.class);
 
@@ -16,7 +16,7 @@ public class Room implements Cloneable{
     private RoomType roomType;
 
     public Room(List<ElectricAppliance> electricAppliances, int numberOfSoket,
-                RoomType roomType) throws NotEnoughFreeSockets{
+                RoomType roomType) throws NotEnoughFreeSocketsException {
         logger.info("Create class");
         setNumberOfSoket(numberOfSoket);
         setElectricAppliances(electricAppliances);
@@ -54,11 +54,11 @@ public class Room implements Cloneable{
         return power;
     }
 
-    public void addElectricalAppliances(ElectricAppliance electricAppliance) throws NotEnoughFreeSockets{
+    public void addElectricalAppliances(ElectricAppliance electricAppliance) throws NotEnoughFreeSocketsException {
         if(!isFreeSocketsExist()){
             logger.error("Not enough free sockets");
 
-            throw new NotEnoughFreeSockets("Number of sockets is "+ getNumberOfSoket() +
+            throw new NotEnoughFreeSocketsException("Number of sockets is "+ getNumberOfSoket() +
                     " . You using "+getElectricAppliances().size() +"ElectricAppliances in this Room");
         }
         if( (getElectricAppliances().size() + 1) == getNumberOfSoket()){
@@ -74,11 +74,11 @@ public class Room implements Cloneable{
         return electricAppliances;
     }
 
-    public void setElectricAppliances(List<ElectricAppliance> electricAppliances) throws NotEnoughFreeSockets{
+    public void setElectricAppliances(List<ElectricAppliance> electricAppliances) throws NotEnoughFreeSocketsException {
         if(!isEnoughSocketsForElectricAppliance(getNumberOfSoket(), electricAppliances.size())){
             logger.error("Not enough free sockets");
 
-            throw new NotEnoughFreeSockets("Number of sockets is "+ getNumberOfSoket() +
+            throw new NotEnoughFreeSocketsException("Number of sockets is "+ getNumberOfSoket() +
                     " . You want using "+ electricAppliances.size() +" ElectricAppliances in this Room");
         }
         if(Validator.isNull(electricAppliances)){

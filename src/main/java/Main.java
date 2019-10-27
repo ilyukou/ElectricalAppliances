@@ -10,16 +10,14 @@ public class Main {
     public static void main(String[] args) throws ClassNotFoundException, IOException, CloneNotSupportedException {
         //testClone();
         sort();
-        Creater creater = new Creater();
 
         // create Apartment with Rooms and ElectricAppliance in them
-        Apartment apartmentList = creater.createApartment();
+        Apartment apartmentList = Creater.createApartment();
 
         System.out.println("Power in apartment "+apartmentList.getPowerInRooms());
 
         // Sorting List<ElectricAppliance> by power
-        List<ElectricAppliance> sortElectricApplianceByPower =  apartmentList
-                .sortElectricApplianceByPower(apartmentList.getAllElectricAppliance());
+        apartmentList.sortElectricApplianceByPower();
 
         // Searching ElectricAppliance by min and max power
         ElectricAppliance foundElectricAppliance = apartmentList
