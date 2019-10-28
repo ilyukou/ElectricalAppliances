@@ -16,7 +16,8 @@ public class Main {
         // Searching ElectricAppliance by min and max power
         ElectricAppliance foundElectricAppliance = apartmentList
                 .searchElectricApplianceByPower(apartmentList.getAllElectricAppliance(), 165, 201);
-        System.out.println("Found ElectricAppliance : Name " + foundElectricAppliance.getName() + " Power "+foundElectricAppliance.getPower());
+        System.out.println("Found ElectricAppliance : Name "
+                + foundElectricAppliance.getName() + " Power "+foundElectricAppliance.getPower());
 
 
         // calculate power in Apartment
