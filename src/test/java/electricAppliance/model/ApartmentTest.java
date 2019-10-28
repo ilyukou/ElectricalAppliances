@@ -92,9 +92,9 @@ class ApartmentTest {
     }
 
     @Test
-    void getPowerInRooms() {
+    void getPowerInApartment() {
         Apartment apartment = Creater.createApartment();
-        assertEquals(4520,apartment.getPowerInRooms());
+        assertEquals(4520,apartment.getPowerInApartment());
     }
 
     @Test

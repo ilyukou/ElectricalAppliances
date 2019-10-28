@@ -7,35 +7,46 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        //testClone();
+
+        // Sort the ElectricAppliance in the Apartment by power;
         sort();
 
-        // create Apartment with Rooms and ElectricAppliance in them
         Apartment apartmentList = Creater.createApartment();
-
-        System.out.println("Power in apartment " + apartmentList.getPowerInRooms());
-
-        // Sorting List<ElectricAppliance> by power
-        List<ElectricAppliance> sorted = apartmentList
-                .sortElectricApplianceByPower(apartmentList.getAllElectricAppliance());
 
         // Searching ElectricAppliance by min and max power
         ElectricAppliance foundElectricAppliance = apartmentList
-                .searchElectricApplianceByPower(apartmentList.getAllElectricAppliance(), 10, 1005);
+                .searchElectricApplianceByPower(apartmentList.getAllElectricAppliance(), 165, 201);
+        System.out.println("Found ElectricAppliance : Name " + foundElectricAppliance.getName() + " Power "+foundElectricAppliance.getPower());
 
-        System.out.println("Found " + foundElectricAppliance.getName() + " power " + foundElectricAppliance.getPower());
 
-        System.out.println();
+        // calculate power in Apartment
+        System.out.println("Power in Apartment "+apartmentList.getPowerInApartment());
+
+        // Number of rooms
+        System.out.println("Number of rooms " +apartmentList.getRooms().size());
+
+        // Number of ElectricAppliance
+        System.out.println("Number of ElectricAppliance "+apartmentList.getAllElectricAppliance().size());
 
     }
 
     public static void sort() {
         Apartment apartment = Creater.createApartment();
-        List<ElectricAppliance> sort = apartment.sortElectricApplianceByPower(apartment.getAllElectricAppliance());
+        List<ElectricAppliance> list = apartment.getAllElectricAppliance();
 
-        for (int i = 1; i < sort.size(); i++) {
-            System.out.println("Sorted " + sort.get(i).getPower());
+        System.out.println("Unsorted List:");
+        display(list);
+
+        // Sorting
+        apartment.sortElectricApplianceByPower(list);
+
+        System.out.println("Sorted List:");
+        display(list);
+    }
+
+    private static void display(List<ElectricAppliance> list){
+        for (int i = 1; i < list.size(); i++) {
+            System.out.println(i+". " + list.get(i).getPower());
         }
-        System.out.println();
     }
 }

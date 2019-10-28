@@ -54,7 +54,7 @@ public class Apartment implements Cloneable {
         }
     }
 
-    public int getPowerInRooms() {
+    public int getPowerInApartment() {
         int power = 0;
         for (Room room : getRooms()) {
             power += room.getPowerInSokets();
