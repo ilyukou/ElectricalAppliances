@@ -4,20 +4,20 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TreadmillTest {
     private Treadmill treadmill;
 
     @BeforeEach
     void setUp() {
-        treadmill = new Treadmill(1,"Tread",1,1,1,1);
+        treadmill = new Treadmill(1, "Tread", 1, 1, 1, 1);
     }
 
     @Test
     void setTrackMaxSpeed_whenTrackMaxSpeedValidate() {
         treadmill.setTrackMaxSpeed(10);
-        assertEquals(10,treadmill.getTrackMaxSpeed());
+        assertEquals(10, treadmill.getTrackMaxSpeed());
     }
 
     @Test
@@ -31,7 +31,7 @@ class TreadmillTest {
     @Test
     void setTrackWidth_whenTrackWidthValidate() {
         treadmill.setTrackWidth(3);
-        assertEquals(3,treadmill.getTrackWidth());
+        assertEquals(3, treadmill.getTrackWidth());
     }
 
     @Test
@@ -45,7 +45,7 @@ class TreadmillTest {
     @Test
     void setTrackLength_whenTrackWidthLength() {
         treadmill.setTrackLength(16);
-        assertEquals(16,treadmill.getTrackLength());
+        assertEquals(16, treadmill.getTrackLength());
     }
 
     @Test

@@ -11,19 +11,19 @@ class MicrowaveTest {
 
     @BeforeEach
     void setUp() {
-        microwave = new Microwave(100,"LG",5,30);
+        microwave = new Microwave(100, "LG", 5, 30);
     }
 
     // test parent (KitchenElectricAppliance.class) setter
 
     @Test
-    void setCookingTime_whenCookingTimeValidate(){
+    void setCookingTime_whenCookingTimeValidate() {
         microwave.setCookingTime(100);
         assertEquals(100, microwave.getCookingTime());
     }
 
     @Test
-    void setCookingTime_whenCookingTimeUnValidate(){
+    void setCookingTime_whenCookingTimeUnValidate() {
         Assertions.assertThrows(
                 IllegalArgumentException.class,
                 () -> microwave.setCookingTime(-100)
@@ -33,13 +33,13 @@ class MicrowaveTest {
     @Test
     void setVolume_whenVolumeValidate() {
         microwave.setVolume(10);
-        assertEquals(10,microwave.getVolume());
+        assertEquals(10, microwave.getVolume());
     }
 
     @Test
     void setVolume_whenVolumeUnValidate() {
         Assertions.assertThrows(
-                IllegalArgumentException.class ,
+                IllegalArgumentException.class,
                 () -> microwave.setVolume(-10)
         );
     }

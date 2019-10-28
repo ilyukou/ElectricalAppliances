@@ -20,8 +20,8 @@ class ElectricApplianceCompareByPowerTest {
         when(first.getPower()).thenReturn(10);
         when(second.getPower()).thenReturn(5);
 
-        int res = comparatorByPower.compare(first,second);
-        assertEquals(1,res);
+        int res = comparatorByPower.compare(first, second);
+        assertEquals(1, res);
     }
 
     @Test
@@ -29,8 +29,8 @@ class ElectricApplianceCompareByPowerTest {
         when(first.getPower()).thenReturn(10);
         when(second.getPower()).thenReturn(5);
 
-        int res = comparatorByPower.compare(second,first);
-        assertEquals(-1,res);
+        int res = comparatorByPower.compare(second, first);
+        assertEquals(-1, res);
     }
 
     @Test
@@ -38,7 +38,7 @@ class ElectricApplianceCompareByPowerTest {
         when(first.getPower()).thenReturn(10);
         when(second.getPower()).thenReturn(10);
 
-        int res = comparatorByPower.compare(first,second);
-        assertEquals(0,res);
+        int res = comparatorByPower.compare(first, second);
+        assertEquals(0, res);
     }
 }

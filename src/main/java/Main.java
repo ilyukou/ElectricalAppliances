@@ -17,17 +17,17 @@ public class Main {
         ElectricAppliance foundElectricAppliance = apartmentList
                 .searchElectricApplianceByPower(apartmentList.getAllElectricAppliance(), 165, 201);
         System.out.println("Found ElectricAppliance : Name "
-                + foundElectricAppliance.getName() + " Power "+foundElectricAppliance.getPower());
+                + foundElectricAppliance.getName() + " Power " + foundElectricAppliance.getPower());
 
 
         // calculate power in Apartment
-        System.out.println("Power in Apartment "+apartmentList.getPowerInApartment());
+        System.out.println("Power in Apartment " + apartmentList.getPowerInApartment());
 
         // Number of rooms
-        System.out.println("Number of rooms " +apartmentList.getRooms().size());
+        System.out.println("Number of rooms " + apartmentList.getRooms().size());
 
         // Number of ElectricAppliance
-        System.out.println("Number of ElectricAppliance "+apartmentList.getAllElectricAppliance().size());
+        System.out.println("Number of ElectricAppliance " + apartmentList.getAllElectricAppliance().size());
 
     }
 
@@ -45,9 +45,9 @@ public class Main {
         display(list);
     }
 
-    private static void display(List<ElectricAppliance> list){
-        for (int i = 1; i < list.size(); i++) {
-            System.out.println(i+". " + list.get(i).getPower());
+    private static void display(List<ElectricAppliance> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(i + ". " + list.get(i).getPower());
         }
     }
 }

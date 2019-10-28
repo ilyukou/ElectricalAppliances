@@ -25,9 +25,9 @@ class RoomTest {
     @Test
     void setRoomType_whenRoomTypeIsNull() {
 
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            room.setRoomType(null);
-        });
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> room.setRoomType(null)
+        );
     }
 
     @Test
@@ -35,7 +35,7 @@ class RoomTest {
 
         room.setRoomType(RoomType.LivingRoom);
 
-        assertEquals(room.getRoomType(),RoomType.LivingRoom);
+        assertEquals(room.getRoomType(), RoomType.LivingRoom);
     }
 
     @Test
@@ -50,7 +50,7 @@ class RoomTest {
         room.setNumberOfSockets(2);
 
         Assertions.assertThrows(
-                NotEnoughFreeSocketsException.class ,
+                NotEnoughFreeSocketsException.class,
                 () -> room.setElectricAppliances(electricAppliances)
         );
     }
@@ -65,7 +65,7 @@ class RoomTest {
         );
 
         try {
-            Room room = new Room(electricAppliances,3, RoomType.LivingRoom);
+            Room room = new Room(electricAppliances, 3, RoomType.LivingRoom);
         } catch (NotEnoughFreeSocketsException notEnoughFreeSocketsException) {
             notEnoughFreeSocketsException.printStackTrace();
         }
@@ -76,7 +76,7 @@ class RoomTest {
 
     @Test
     void getPowerInSokets() {
-        assertEquals(1200,room.getPowerInSokets());
+        assertEquals(1200, room.getPowerInSokets());
     }
 
     @Test
@@ -88,10 +88,10 @@ class RoomTest {
 
 
         try {
-            Room r = new Room(electricAppliances,2,RoomType.LivingRoom);
+            Room r = new Room(electricAppliances, 2, RoomType.LivingRoom);
             r.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
 
-            assertEquals(2,r.getElectricAppliances().size());
+            assertEquals(2, r.getElectricAppliances().size());
         } catch (NotEnoughFreeSocketsException notEnoughFreeSocketsException) {
             notEnoughFreeSocketsException.printStackTrace();
             assertTrue(false);
@@ -105,8 +105,9 @@ class RoomTest {
         room.setNumberOfSockets(2);
 
         Assertions.assertThrows(
-                NotEnoughFreeSocketsException.class ,
-                () -> { room.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
+                NotEnoughFreeSocketsException.class,
+                () -> {
+                    room.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
                     room.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
                     room.addElectricalAppliances(Mockito.mock(ElectricAppliance.class));
                 });
@@ -123,8 +124,10 @@ class RoomTest {
         );
 
         Assertions.assertThrows(
-                NotEnoughFreeSocketsException.class ,
-                () -> { Room room = new Room(electricAppliances,2,RoomType.LivingRoom); });
+                NotEnoughFreeSocketsException.class,
+                () -> {
+                    Room room = new Room(electricAppliances, 2, RoomType.LivingRoom);
+                });
     }
 
     @Test
@@ -137,13 +140,13 @@ class RoomTest {
 
         Room room = null;
         try {
-            room = new Room(electricAppliances,4,RoomType.LivingRoom);
+            room = new Room(electricAppliances, 4, RoomType.LivingRoom);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
-        assertEquals(3,room.getElectricAppliances().size());
+        assertEquals(3, room.getElectricAppliances().size());
     }
 
     @Test
@@ -154,14 +157,13 @@ class RoomTest {
 
         Room r = null;
         try {
-            r = new Room(electricAppliances,3, RoomType.LivingRoom);
+            r = new Room(electricAppliances, 3, RoomType.LivingRoom);
             r.setNumberOfSockets(5);
         } catch (NotEnoughFreeSocketsException notEnoughFreeSocketsException) {
             notEnoughFreeSocketsException.printStackTrace();
         }
 
-        assertEquals(5,r.getNumberOfSockets());
-
+        assertEquals(5, r.getNumberOfSockets());
 
 
     }
@@ -172,10 +174,11 @@ class RoomTest {
         electricAppliances.add(Mockito.mock(ElectricAppliance.class));
 
         Assertions.assertThrows(
-                IllegalArgumentException.class , () -> {
-            Room r = new Room(electricAppliances,3, RoomType.LivingRoom);
-            r.setNumberOfSockets(-12);
-        });
+                IllegalArgumentException.class,
+                () -> {
+                    Room r = new Room(electricAppliances, 3, RoomType.LivingRoom);
+                    r.setNumberOfSockets(-12);
+                });
 
     }
 }

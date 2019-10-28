@@ -25,11 +25,12 @@ public class Apartment implements Cloneable {
     }
 
     public void setRooms(List<Room> rooms) throws IllegalArgumentException {
-        if (!Validator.isValidList(rooms)) {
+        if (Validator.isValidList(rooms)) {
+            this.rooms = rooms;
+        } else {
             logger.error("List<Room> is null or size is 0");
             throw new IllegalArgumentException("List<Room> is null or size is 0");
         }
-        this.rooms = rooms;
     }
 
     public void addRooms(List<Room> rooms) {

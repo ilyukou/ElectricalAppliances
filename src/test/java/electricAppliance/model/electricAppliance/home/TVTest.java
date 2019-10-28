@@ -12,20 +12,20 @@ class TVTest {
 
     @BeforeEach
     void setUp() {
-        tv = new TV(100,"Lg",1,1);
+        tv = new TV(100, "Lg", 1, 1);
     }
 
     // test parent (HomeElectricAppliance.class) setter
     @Test
     void setSoundLevel_whenSoundLevelValidate() {
         tv.setSoundLevel(10);
-        assertEquals(10,tv.getSoundLevel());
+        assertEquals(10, tv.getSoundLevel());
     }
 
     @Test
     void setSoundLevel_whenSoundLevelNotValidate() {
         Assertions.assertThrows(
-                IllegalArgumentException.class ,
+                IllegalArgumentException.class,
                 () -> tv.setSoundLevel(-10)
         );
     }
@@ -33,14 +33,14 @@ class TVTest {
     @Test
     void setScreenDiagonal_whenScreenDiagonalValidate() {
         tv.setScreenDiagonal(100);
-        assertEquals(100,tv.getScreenDiagonal());
+        assertEquals(100, tv.getScreenDiagonal());
     }
 
     @Test
     void setScreenDiagonal_whenScreenDiagonalNotValidate() {
 
         Assertions.assertThrows(
-                IllegalArgumentException.class ,
+                IllegalArgumentException.class,
                 () -> tv.setScreenDiagonal(-100)
         );
     }

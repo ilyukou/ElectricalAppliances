@@ -14,6 +14,7 @@ import electricAppliance.model.electricAppliance.lighting.LightCapType;
 import electricAppliance.model.electricAppliance.lighting.TableLamp;
 import electricAppliance.model.electricAppliance.sport.ExerciseBike;
 import electricAppliance.model.electricAppliance.sport.Treadmill;
+import electricAppliance.model.exception.NotEnoughFreeSocketsException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -75,10 +76,9 @@ public class Creater {
             rooms.add(new Room(sportElectricApplianceList, 6, RoomType.Sport));
             rooms.add(new Room(kitchenElectricApplianceList, 7, RoomType.Kitchen));
             rooms.add(new Room(homeElectricApplianceList, 7, RoomType.LivingRoom));
-        } catch (Exception e) {
+        } catch (NotEnoughFreeSocketsException e) {
             e.printStackTrace();
         }
-
         return new Apartment(rooms);
     }
 }

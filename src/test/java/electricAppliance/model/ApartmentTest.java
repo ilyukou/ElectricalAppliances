@@ -9,7 +9,8 @@ import org.mockito.Mockito;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ApartmentTest {
     private Apartment setUpApartment;
@@ -21,28 +22,25 @@ class ApartmentTest {
 
     @Test
     void setRooms_whenRoomsIsValidList() {
-       Room room = Mockito.mock(Room.class);
-
+        Room room = Mockito.mock(Room.class);
         List<Room> rooms = new ArrayList<>();
         rooms.add(room);
         rooms.add(room);
-
         Apartment apartment = new Apartment(rooms);
 
-        assertEquals(2,apartment.getRooms().size());
+        assertEquals(2, apartment.getRooms().size());
     }
 
     @Test
     void setRooms_whenRoomsIsNotValidList() {
         Room room = Mockito.mock(Room.class);
-
         List<Room> rooms = null;
 
-
-
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            Apartment apartment = new Apartment(rooms);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> {
+                    Apartment apartment = new Apartment(rooms);
+                });
     }
 
     @Test
@@ -57,17 +55,19 @@ class ApartmentTest {
 
         apartment.addRooms(rooms);
 
-        assertEquals(setUpApartment.getRooms().size()+2,apartment.getRooms().size());
+        assertEquals(setUpApartment.getRooms().size() + 2, apartment.getRooms().size());
     }
+
     @Test
     void addRooms_whenRoomsIsNull() {
         Apartment apartment = Creater.createApartment();
 
         List<Room> rooms = null;
 
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            apartment.addRooms(rooms);
-        });
+        Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> apartment.addRooms(rooms)
+        );
     }
 
     @Test
@@ -76,7 +76,7 @@ class ApartmentTest {
         Room room = Mockito.mock(Room.class);
 
         apartment.addRoom(room);
-        assertEquals(setUpApartment.getRooms().size()+1,apartment.getRooms().size());
+        assertEquals(setUpApartment.getRooms().size() + 1, apartment.getRooms().size());
     }
 
     @Test
@@ -84,23 +84,21 @@ class ApartmentTest {
         Apartment apartment = Creater.createApartment();
         Room room = null;
 
-
-
-        Assertions.assertThrows(IllegalArgumentException.class , () -> {
-            apartment.addRoom(room);
-        });
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> apartment.addRoom(room)
+        );
     }
 
     @Test
     void getPowerInApartment() {
         Apartment apartment = Creater.createApartment();
-        assertEquals(4520,apartment.getPowerInApartment());
+        assertEquals(4520, apartment.getPowerInApartment());
     }
 
     @Test
     void getAllElectricAppliance() {
         Apartment apartment = Creater.createApartment();
-        assertEquals(12,apartment.getAllElectricAppliance().size());
+        assertEquals(12, apartment.getAllElectricAppliance().size());
     }
 
     @Test
@@ -108,7 +106,7 @@ class ApartmentTest {
         Apartment apartment = Creater.createApartment();
 
         ElectricAppliance electricAppliance =
-                apartment.searchElectricApplianceByPower(apartment.getAllElectricAppliance(),480,520);
+                apartment.searchElectricApplianceByPower(apartment.getAllElectricAppliance(), 480, 520);
 
         assertTrue(electricAppliance.getPower() == 500
                 && electricAppliance.getName().equals("TreadGym"));
@@ -118,9 +116,9 @@ class ApartmentTest {
     void searchElectricApplianceByPower_whenNotFound() {
         Apartment apartment = Creater.createApartment();
 
-        Assertions.assertThrows(NullPointerException.class , () -> {
+        Assertions.assertThrows(NullPointerException.class, () -> {
             ElectricAppliance electricAppliance =
-                    apartment.searchElectricApplianceByPower(apartment.getAllElectricAppliance(),1,2);
+                    apartment.searchElectricApplianceByPower(apartment.getAllElectricAppliance(), 1, 2);
             electricAppliance.getPower();
         });
     }
@@ -134,8 +132,8 @@ class ApartmentTest {
 
         boolean actual = true;
 
-        for (int i=1; i<sortedList.size(); i++){
-            if(sortedList.get(i).getPower() < sortedList.get(i-1).getPower()){
+        for (int i = 1; i < sortedList.size(); i++) {
+            if (sortedList.get(i).getPower() < sortedList.get(i - 1).getPower()) {
                 actual = false;
             }
         }

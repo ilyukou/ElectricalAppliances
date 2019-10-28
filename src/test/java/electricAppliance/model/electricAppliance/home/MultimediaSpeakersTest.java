@@ -13,20 +13,20 @@ class MultimediaSpeakersTest {
 
     @BeforeEach
     void setUp() {
-        multimediaSpeakers = new MultimediaSpeakers(100,"Buss", 100,2);
+        multimediaSpeakers = new MultimediaSpeakers(100, "Buss", 100, 2);
     }
 
     @Test
     void setNumberOfSpeakers_whenNumberIsValidate() {
         multimediaSpeakers.setNumberOfSpeakers(3);
-        assertEquals(3,multimediaSpeakers.getNumberOfSpeakers());
+        assertEquals(3, multimediaSpeakers.getNumberOfSpeakers());
     }
 
     @Test
     void setNumberOfSpeakers_whenNumberIsNotValidate() {
 
         Assertions.assertThrows(
-                IllegalArgumentException.class ,
+                IllegalArgumentException.class,
                 () -> multimediaSpeakers.setNumberOfSpeakers(-3)
         );
     }
@@ -35,7 +35,7 @@ class MultimediaSpeakersTest {
     @Test
     void setPower_whenPowerIsValidate() {
         multimediaSpeakers.setPower(12);
-        assertEquals(12,multimediaSpeakers.getPower());
+        assertEquals(12, multimediaSpeakers.getPower());
     }
 
     @Test
@@ -49,7 +49,7 @@ class MultimediaSpeakersTest {
     @Test
     void setElectricApplianceType_whenElectricApplianceTypeIsValidate() {
         multimediaSpeakers.setElectricApplianceType(ElectricApplianceType.Home);
-        assertEquals(ElectricApplianceType.Home,multimediaSpeakers.getElectricApplianceType());
+        assertEquals(ElectricApplianceType.Home, multimediaSpeakers.getElectricApplianceType());
     }
 
     @Test
@@ -63,7 +63,7 @@ class MultimediaSpeakersTest {
     @Test
     void setName_whenNameIsValidate() {
         multimediaSpeakers.setName("TestName");
-        assertEquals("TestName",multimediaSpeakers.getName());
+        assertEquals("TestName", multimediaSpeakers.getName());
     }
 
     @Test

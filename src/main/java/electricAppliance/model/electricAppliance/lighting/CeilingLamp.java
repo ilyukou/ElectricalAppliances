@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class CeilingLamp extends LightElectricAppliance {
+
     private static final Logger logger = LogManager.getLogger(CeilingLamp.class);
     private static final int MIN_WEIGHT = 0;
 

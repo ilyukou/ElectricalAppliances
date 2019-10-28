@@ -11,27 +11,28 @@ class StoveTest {
 
     @BeforeEach
     void setUp() {
-        stove = new Stove(100,"LG",5,2);
+        stove = new Stove(100, "LG", 5, 2);
     }
 
 
     @Test
-    void setNumberOfBurners_whenNumbersValidate(){
+    void setNumberOfBurners_whenNumbersValidate() {
         stove.setNumberOfBurners(3);
-        assertEquals(3,stove.getNumberOfBurners());
+        assertEquals(3, stove.getNumberOfBurners());
     }
 
     @Test
-    void setNumberOfBurners_whenBurnersNumbersMoreThanValidate(){
+    void setNumberOfBurners_whenBurnersNumbersMoreThanValidate() {
         Assertions.assertThrows(
-                IllegalArgumentException.class ,
+                IllegalArgumentException.class,
                 () -> stove.setNumberOfBurners(5)
         );
     }
+
     @Test
-    void setNumberOfBurners_whenBurnersNumbersLessThanValidate(){
+    void setNumberOfBurners_whenBurnersNumbersLessThanValidate() {
         Assertions.assertThrows(
-                IllegalArgumentException.class ,
+                IllegalArgumentException.class,
                 () -> stove.setNumberOfBurners(-1)
         );
     }

@@ -14,6 +14,7 @@ public class MultimediaSpeakers extends HomeElectricAppliance implements Cloneab
     public MultimediaSpeakers(int power, String name, int soundLevel,
                               int numberOfSpeakers) {
         super(power, name, soundLevel);
+        logger.info("Create class by constructor");
         setNumberOfSpeakers(numberOfSpeakers);
     }
 

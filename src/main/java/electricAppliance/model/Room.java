@@ -13,11 +13,11 @@ public class Room {
     private static final Logger logger = LogManager.getLogger(Room.class);
 
     private List<ElectricAppliance> electricAppliances = new ArrayList<>();
-    private int numberOfSoket;
-    private RoomType roomType;
-
     private static final int MIN_NUMBERS_OF_SOCKETS = 1;
     private static final int MAX_NUMBERS_OF_SOCKETS = 10;
+
+    private int numberOfSoket;
+    private RoomType roomType;
 
     public Room(List<ElectricAppliance> electricAppliances, int numberOfSoket,
                 RoomType roomType) throws NotEnoughFreeSocketsException {
